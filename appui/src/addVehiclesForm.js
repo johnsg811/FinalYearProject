@@ -13,32 +13,34 @@ export class AddVehicles extends Component{
 			var self = this;
 			self.allManufact = [];
 	    this.manufacturer.forEach(function(id) {
-			self.allManufact[count] = {};
-		  self.allManufact[count].id = id.c[0];
-			var manufacturer = manufacturerContract.getBrand(id.c[0])[1].match(/.{1,2}/g).map(function(v){
-	      return String.fromCharCode(parseInt(v, 16));
-	    }).join('');
-		  self.allManufact[count].name = manufacturer;
-		  count++;
-		});
+				self.allManufact[count] = {};
+			  self.allManufact[count].id = id.c[0];
+				var manufacturer = manufacturerContract.getBrand(id.c[0])[1].match(/.{1,2}/g).map(function(v){
+	      	return String.fromCharCode(parseInt(v, 16));
+		    }).join('');
+			  self.allManufact[count].name = manufacturer;
+			  count++;
+			});
+			this.state.manufacturerID = this.allManufact[0].id
     	this.handleChange = this.handleChange.bind(this);
 	    this.handleSubmit = this.handleSubmit.bind(this);
   	}
 
-	handleChange(event) {
-		var targetName = event.target.name;
+		handleChange(event) {
+			var targetName = event.target.name;
     	this.setState({[targetName]: event.target.value});
   	}
 
   	handleSubmit(event) {
 		// alert('A name was submitted: '+ this.state.country+ this.state.id);
-		vehicleContract.setCar(this.state.id,this.state.model,this.state.year,this.state.value,this.state.active,this.state.manufacturerID,{gas: 1000000});
+		vehicleContract.setCar(this.state.id,this.state.model,this.state.year,this.state.value,true,this.state.manufacturerID,{gas: 1000000});
 		//let value = manufacturerContract.getBrand(this.state.id,{gas: 1000000});
 		//web3.toAscii(value[1])
 		event.preventDefault();
 	}
 	handleChangeSelect(event) {
 	  const manufacturerId = event.target.value;
+		this.state.manufacturerID = manufacturerId;
 	  const manufacturer = this.allManufact.find(u => u.id === manufacturerId);
 	  this.setState({
 	    value: manufacturer
@@ -87,9 +89,8 @@ export class AddVehicles extends Component{
 									</FormControl>
 		            	</div>
 		            	<div class="form-group">
-		            		<label for="active">ACTIVE</label>
-						    <input type="number" name = "active" value={this.state.value} onChange={this.handleChange} class="form-control" placeholder="Enter Active" />
-		            	</div>
+										<input type="text" type="Submit" class="form-control"  />
+									</div>
 		            </form>
 		        </div>
           	</div>

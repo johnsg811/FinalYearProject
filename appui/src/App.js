@@ -4,6 +4,7 @@ import './App.css';
 import {AddManufacturerForm} from "./addManufacturerForm";
 import {AddVehicles} from "./addVehiclesForm";
 import {Welcome} from "./welcome";
+import {ViewVehicleInfo} from "./viewVehicleInfo"
 
 class App extends Component {
   render() {
@@ -14,7 +15,7 @@ class App extends Component {
           <h1 className="App-title">Welcome to React</h1>
         </header>
         <br />
-         <AddVehicles />
+         <ViewVehicleInfo />
       </div>
     );
   }

@@ -58,7 +58,7 @@ export class AddManufacturerForm extends Component{
 		            	</div>
 		            	<div class="form-group">
 		            		<label for="manufacturerId">Website</label>
-						    <input type="text" type="Submit" class="form-control"  />
+						    		<input type="text" type="Submit" class="form-control"  />
 		            	</div>
 		            </form>
 		        </div>
