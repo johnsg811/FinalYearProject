@@ -15,7 +15,7 @@ export class AddVehicles extends Component{
 	    this.manufacturer.forEach(function(id) {
 				self.allManufact[count] = {};
 			  self.allManufact[count].id = id.c[0];
-				var manufacturer = manufacturerContract.getBrand(id.c[0])[1].match(/.{1,2}/g).map(function(v){
+				var manufacturer = manufacturerContract.getManufacturerById(id.c[0])[1].match(/.{1,2}/g).map(function(v){
 	      	return String.fromCharCode(parseInt(v, 16));
 		    }).join('');
 			  self.allManufact[count].name = manufacturer;
@@ -24,6 +24,7 @@ export class AddVehicles extends Component{
 			this.state.manufacturerID = this.allManufact[0].id
     	this.handleChange = this.handleChange.bind(this);
 	    this.handleSubmit = this.handleSubmit.bind(this);
+			this.handleChangeSelect = this.handleChangeSelect.bind(this);
   	}
 
 		handleChange(event) {
@@ -78,7 +79,7 @@ export class AddVehicles extends Component{
 		            	</div>
 		            	<div class="form-group">
 									<label for="value">Car Manufacturer</label>
-		            		<FormControl id = "manufacturer" componentClass="select" onChange={this.handleChangeSelect.bind(this)}>
+		            		<FormControl id = "manufacturer" componentClass="select" onChange={this.handleChangeSelect}>
 			   							{this.allManufact.map((r , i) =>
 									     <option
 									       key={i}

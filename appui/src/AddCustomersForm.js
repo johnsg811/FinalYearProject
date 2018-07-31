@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { dealerContract } from "./setup";
-export class AddDealers extends Component{
+export class AddCustomersForm extends Component{
 
 	constructor(props) {
 	    super(props);
-	    this.state = {did: '',dname: '', dphone:'', dstreet:'', dtown:'', dcounty:''};
+	    this.state = {cid: '',cname: '', cdob:'', clicencenum:'', cstreet:'', dtown:'', dcounty:''};
 	    this.handleChange = this.handleChange.bind(this);
 	    this.handleSubmit = this.handleSubmit.bind(this);
   	}
@@ -16,8 +16,8 @@ export class AddDealers extends Component{
 
   	handleSubmit(event) {
 		// alert('A name was submitted: '+ this.state.country+ this.state.id);
-		dealerContract.setBrand(this.state.did,this.state.dname,this.state.dphone,this.state.dstreet,this.state.dtown,this.state.dcounty,{gas: 1000000});
-		let value = dealerContract.getDealer(this.state.did,{gas: 1000000});
+		customerContract.setClient(this.state.cid,this.state.cname,this.state.cdob,this.state.clicencenum,this.state.dstreet,this.state.dtown,this.state.dcounty,{gas: 1000000});
+		let value = customerContract.getClient(this.state.did,{gas: 1000000});
 		//web3.toAscii(value[1])
 		event.preventDefault();
 	}
@@ -32,24 +32,28 @@ export class AddDealers extends Component{
 	            <div class="col-md-4">
 	        	</div>
 	        	<div class="col-md-4">
-	            	<h3> Dealer Details</h3>
+	            	<h3> Customer Details</h3>
 	            	<hr />
 		            <form onSubmit={this.handleSubmit}>
 		            	<div class="form-group">
 		            		<label for="did">ID</label>
-						    <input type="number" name = "did" value={this.state.did} onChange={this.handleChange} class="form-control" placeholder="Enter ID" required/>
+						    <input type="number" name = "cid" value={this.state.cid} onChange={this.handleChange} class="form-control" placeholder="Enter ID" required/>
 		            	</div>
 		            	<div class="form-group">
 		            		<label for="did">Name</label>
-						    <input type="text" name = "dname" value={this.state.dname} onChange={this.handleChange} class="form-control" placeholder="Enter Name" />
+						    <input type="text" name = "cname" value={this.state.cname} onChange={this.handleChange} class="form-control" placeholder="Enter Name" />
 		            	</div>
 		            	<div class="form-group">
-		            		<label for="did">Phone</label>
-						    <input type="text" name = "dphone" value={this.state.dphone} onChange={this.handleChange} class="form-control" placeholder="Enter Phone" />
+		            		<label for="did">DateOfBirth</label>
+						    <input type="text" name = "cdob" value={this.state.cdob} onChange={this.handleChange} class="form-control" placeholder="Date of Birth" />
+		            	</div>
+									<div class="form-group">
+		            		<label for="did">LicenceNumber</label>
+						    <input type="number" name = "clicencenum" value={this.state.clicencenum} onChange={this.handleChange} class="form-control" placeholder="Enter Licence Number" />
 		            	</div>
 		            	<div class="form-group">
 		            		<label for="did">Street</label>
-						    <input type="number" name = "dstreet" value={this.state.dstreet} onChange={this.handleChange} class="form-control" placeholder="Enter Strret" />
+						    <input type="number" name = "dstreet" value={this.state.dstreet} onChange={this.handleChange} class="form-control" placeholder="Enter Street" />
 		            	</div>
 		            	<div class="form-group">
 		            		<label for="did">Town</label>
@@ -60,7 +64,7 @@ export class AddDealers extends Component{
 						    <input type="email" name = "dcounty" value={this.state.dcounty} onChange={this.handleChange} class="form-control" placeholder="Enter County" />
 		            	</div>
 		            	<div class="form-group">
-		            		<label for="did">County</label>
+		            		<label for="did">Submit</label>
 						    <input type="text" type="Submit" class="form-control"  />
 		            	</div>
 		            </form>
@@ -70,4 +74,4 @@ export class AddDealers extends Component{
     }
 }
 
-export default AddDealers;
+export default AddCustomers;

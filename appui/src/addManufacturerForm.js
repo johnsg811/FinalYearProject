@@ -18,7 +18,7 @@ export class AddManufacturerForm extends Component{
   	handleSubmit(event) {
 		// alert('A name was submitted: '+ this.state.country+ this.state.id);
 		manufacturerContract.setBrand(this.state.id,this.state.name,this.state.country,this.state.phone,this.state.website,{gas: 1000000});
-		let value = manufacturerContract.getBrand(this.state.id,{gas: 1000000});
+		let value = manufacturerContract.getManufacturerById(this.state.id,{gas: 1000000});
 		//web3.toAscii(value[1])
 		event.preventDefault();
 	}

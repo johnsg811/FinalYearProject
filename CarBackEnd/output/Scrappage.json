@@ -1,0 +1,2150 @@
+{
+  "contractName": "Scrappage",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "scrapAccts",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_carid",
+          "type": "uint256"
+        },
+        {
+          "name": "_scrapDate",
+          "type": "bytes32"
+        }
+      ],
+      "name": "setScraps",
+      "outputs": [],
+      "payable": true,
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getScraps",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256[]"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_carid",
+          "type": "uint256"
+        }
+      ],
+      "name": "getScrap",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        },
+        {
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "countScraps",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x608060405234801561001057600080fd5b50610313806100206000396000f30060806040526004361061006d576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063168f6da61461007257806388697619146100c2578063a4c20cf714610103578063c11873be14610131578063eacd0fd91461015c575b600080fd5b34801561007e57600080fd5b5061009d600480360381019080803590602001909291905050506101c8565b6040518083815260200182600019166000191681526020019250505060405180910390f35b3480156100ce57600080fd5b506100ed60048036038101908080359060200190929190505050610200565b6040518082815260200191505060405180910390f35b61012f600480360381019080803590602001909291908035600019169060200190929190505050610223565b005b34801561013d57600080fd5b50610146610282565b6040518082815260200191505060405180910390f35b34801561016857600080fd5b5061017161028f565b6040518080602001828103825283818151815260200191508051906020019060200280838360005b838110156101b4578082015181840152602081019050610199565b505050509050019250505060405180910390f35b600080600080848152602001908152602001600020600001546000808581526020019081526020016000206001015491509150915091565b60018181548110151561020f57fe5b906000526020600020016000915090505481565b600080600084815260200190815260200160002090508281600001819055508181600101816000191690555060018084908060018154018082558091505090600182039060005260206000200160009091929091909150555050505050565b6000600180549050905090565b606060018054806020026020016040519081016040528092919081815260200182805480156102dd57602002820191906000526020600020905b8154815260200190600101908083116102c9575b50505050509050905600a165627a7a72305820c88cb9cdc38aad06c77a88c99d5a19da87981fdc077bec8ed95853c0d45f4eac0029",
+  "deployedBytecode": "0x60806040526004361061006d576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063168f6da61461007257806388697619146100c2578063a4c20cf714610103578063c11873be14610131578063eacd0fd91461015c575b600080fd5b34801561007e57600080fd5b5061009d600480360381019080803590602001909291905050506101c8565b6040518083815260200182600019166000191681526020019250505060405180910390f35b3480156100ce57600080fd5b506100ed60048036038101908080359060200190929190505050610200565b6040518082815260200191505060405180910390f35b61012f600480360381019080803590602001909291908035600019169060200190929190505050610223565b005b34801561013d57600080fd5b50610146610282565b6040518082815260200191505060405180910390f35b34801561016857600080fd5b5061017161028f565b6040518080602001828103825283818151815260200191508051906020019060200280838360005b838110156101b4578082015181840152602081019050610199565b505050509050019250505060405180910390f35b600080600080848152602001908152602001600020600001546000808581526020019081526020016000206001015491509150915091565b60018181548110151561020f57fe5b906000526020600020016000915090505481565b600080600084815260200190815260200160002090508281600001819055508181600101816000191690555060018084908060018154018082558091505090600182039060005260206000200160009091929091909150555050505050565b6000600180549050905090565b606060018054806020026020016040519081016040528092919081815260200182805480156102dd57602002820191906000526020600020905b8154815260200190600101908083116102c9575b50505050509050905600a165627a7a72305820c88cb9cdc38aad06c77a88c99d5a19da87981fdc077bec8ed95853c0d45f4eac0029",
+  "sourceMap": "25:726:3:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;25:726:3;;;;;;;",
+  "deployedSourceMap": "25:726:3:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;511:139;;8:9:-1;5:2;;;30:1;27;20:12;5:2;511:139:3;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;159:24;;8:9:-1;5:2;;;30:1;27;20:12;5:2;159:24:3;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;190:226;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;656:91;;8:9:-1;5:2;;;30:1;27;20:12;5:2;656:91:3;;;;;;;;;;;;;;;;;;;;;;;422:83;;8:9:-1;5:2;;;30:1;27;20:12;5:2;422:83:3;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;422:83:3;;;;;;;;;;;;;;;;;511:139;563:4;569:7;596:6;:14;603:6;596:14;;;;;;;;;;;:20;;;618:6;:14;625:6;618:14;;;;;;;;;;;:24;;;588:55;;;;511:139;;;:::o;159:24::-;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;190:226::-;266:19;288:6;:14;295:6;288:14;;;;;;;;;;;266:36;;327:6;313:5;:11;;:20;;;;361:10;343:5;:15;;:28;;;;;;;408:1;383:10;399:6;383:23;;39:1:-1;33:3;27:10;23:18;57:10;52:3;45:23;79:10;72:17;;0:93;383:23:3;;;;;;;;;;;;;;;;;;;;;:26;;190:226;;;:::o;656:91::-;700:4;723:10;:17;;;;716:24;;656:91;:::o;422:83::-;463:6;488:10;481:17;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;422:83;:::o",
+  "source": "pragma solidity ^0.4.18;\ncontract Scrappage {\n\n    struct Scrap {\n        uint carid;\n        bytes32 scrapDate;\n    }\n    mapping (uint => Scrap) scraps;\n    uint[] public scrapAccts;\n\n    function setScraps(uint _carid, bytes32 _scrapDate) public payable{\n        Scrap storage scrap = scraps[_carid];\n\n        scrap.carid = _carid;\n        scrap.scrapDate = _scrapDate;\n\n\n        scrapAccts.push(_carid) -1;\n    }\n\n    function getScraps() view public returns(uint[]) {\n        return scrapAccts;\n    }\n\n    function getScrap(uint _carid) view public returns (uint, bytes32) {\n        return (scraps[_carid].carid, scraps[_carid].scrapDate);\n    }\n\n    function countScraps() view public returns (uint) {\n        return scrapAccts.length;\n    }\n\n\n}\n",
+  "sourcePath": "/Users/johnsgeorge/Desktop/CarApplication/CarBackEnd/contracts/Scappage.sol",
+  "ast": {
+    "absolutePath": "/Users/johnsgeorge/Desktop/CarApplication/CarBackEnd/contracts/Scappage.sol",
+    "exportedSymbols": {
+      "Scrappage": [
+        605
+      ]
+    },
+    "id": 606,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 520,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".18"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:3"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 605,
+        "linearizedBaseContracts": [
+          605
+        ],
+        "name": "Scrappage",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "Scrappage.Scrap",
+            "id": 525,
+            "members": [
+              {
+                "constant": false,
+                "id": 522,
+                "name": "carid",
+                "nodeType": "VariableDeclaration",
+                "scope": 525,
+                "src": "74:10:3",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 521,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "74:4:3",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 524,
+                "name": "scrapDate",
+                "nodeType": "VariableDeclaration",
+                "scope": 525,
+                "src": "94:17:3",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes32",
+                  "typeString": "bytes32"
+                },
+                "typeName": {
+                  "id": 523,
+                  "name": "bytes32",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "94:7:3",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "Scrap",
+            "nodeType": "StructDefinition",
+            "scope": 605,
+            "src": "51:67:3",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 529,
+            "name": "scraps",
+            "nodeType": "VariableDeclaration",
+            "scope": 605,
+            "src": "123:30:3",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Scrap_$525_storage_$",
+              "typeString": "mapping(uint256 => struct Scrappage.Scrap)"
+            },
+            "typeName": {
+              "id": 528,
+              "keyType": {
+                "id": 526,
+                "name": "uint",
+                "nodeType": "ElementaryTypeName",
+                "src": "132:4:3",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "123:23:3",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Scrap_$525_storage_$",
+                "typeString": "mapping(uint256 => struct Scrappage.Scrap)"
+              },
+              "valueType": {
+                "contractScope": null,
+                "id": 527,
+                "name": "Scrap",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 525,
+                "src": "140:5:3",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_Scrap_$525_storage_ptr",
+                  "typeString": "struct Scrappage.Scrap"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 532,
+            "name": "scrapAccts",
+            "nodeType": "VariableDeclaration",
+            "scope": 605,
+            "src": "159:24:3",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_uint256_$dyn_storage",
+              "typeString": "uint256[]"
+            },
+            "typeName": {
+              "baseType": {
+                "id": 530,
+                "name": "uint",
+                "nodeType": "ElementaryTypeName",
+                "src": "159:4:3",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              },
+              "id": 531,
+              "length": null,
+              "nodeType": "ArrayTypeName",
+              "src": "159:6:3",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                "typeString": "uint256[]"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 565,
+              "nodeType": "Block",
+              "src": "256:160:3",
+              "statements": [
+                {
+                  "assignments": [
+                    540
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 540,
+                      "name": "scrap",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 566,
+                      "src": "266:19:3",
+                      "stateVariable": false,
+                      "storageLocation": "storage",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Scrap_$525_storage_ptr",
+                        "typeString": "struct Scrappage.Scrap"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 539,
+                        "name": "Scrap",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 525,
+                        "src": "266:5:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Scrap_$525_storage_ptr",
+                          "typeString": "struct Scrappage.Scrap"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 544,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "baseExpression": {
+                      "argumentTypes": null,
+                      "id": 541,
+                      "name": "scraps",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 529,
+                      "src": "288:6:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Scrap_$525_storage_$",
+                        "typeString": "mapping(uint256 => struct Scrappage.Scrap storage ref)"
+                      }
+                    },
+                    "id": 543,
+                    "indexExpression": {
+                      "argumentTypes": null,
+                      "id": 542,
+                      "name": "_carid",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 534,
+                      "src": "295:6:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "IndexAccess",
+                    "src": "288:14:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Scrap_$525_storage",
+                      "typeString": "struct Scrappage.Scrap storage ref"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "266:36:3"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 549,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 545,
+                        "name": "scrap",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 540,
+                        "src": "313:5:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Scrap_$525_storage_ptr",
+                          "typeString": "struct Scrappage.Scrap storage pointer"
+                        }
+                      },
+                      "id": 547,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "carid",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 522,
+                      "src": "313:11:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 548,
+                      "name": "_carid",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 534,
+                      "src": "327:6:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "313:20:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 550,
+                  "nodeType": "ExpressionStatement",
+                  "src": "313:20:3"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 555,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 551,
+                        "name": "scrap",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 540,
+                        "src": "343:5:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Scrap_$525_storage_ptr",
+                          "typeString": "struct Scrappage.Scrap storage pointer"
+                        }
+                      },
+                      "id": 553,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "scrapDate",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 524,
+                      "src": "343:15:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes32",
+                        "typeString": "bytes32"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 554,
+                      "name": "_scrapDate",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 536,
+                      "src": "361:10:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes32",
+                        "typeString": "bytes32"
+                      }
+                    },
+                    "src": "343:28:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "id": 556,
+                  "nodeType": "ExpressionStatement",
+                  "src": "343:28:3"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    },
+                    "id": 563,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "id": 560,
+                          "name": "_carid",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 534,
+                          "src": "399:6:3",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 557,
+                          "name": "scrapAccts",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 532,
+                          "src": "383:10:3",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_array$_t_uint256_$dyn_storage",
+                            "typeString": "uint256[] storage ref"
+                          }
+                        },
+                        "id": 559,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "push",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": null,
+                        "src": "383:15:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_arraypush_nonpayable$_t_uint256_$returns$_t_uint256_$",
+                          "typeString": "function (uint256) returns (uint256)"
+                        }
+                      },
+                      "id": 561,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "383:23:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "-",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "hexValue": "31",
+                      "id": 562,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "408:1:3",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_1_by_1",
+                        "typeString": "int_const 1"
+                      },
+                      "value": "1"
+                    },
+                    "src": "383:26:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 564,
+                  "nodeType": "ExpressionStatement",
+                  "src": "383:26:3"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 566,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "setScraps",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 537,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 534,
+                  "name": "_carid",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 566,
+                  "src": "209:11:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 533,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "209:4:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 536,
+                  "name": "_scrapDate",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 566,
+                  "src": "222:18:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 535,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "222:7:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "208:33:3"
+            },
+            "payable": true,
+            "returnParameters": {
+              "id": 538,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "256:0:3"
+            },
+            "scope": 605,
+            "src": "190:226:3",
+            "stateMutability": "payable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 574,
+              "nodeType": "Block",
+              "src": "471:34:3",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 572,
+                    "name": "scrapAccts",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 532,
+                    "src": "488:10:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_uint256_$dyn_storage",
+                      "typeString": "uint256[] storage ref"
+                    }
+                  },
+                  "functionReturnParameters": 571,
+                  "id": 573,
+                  "nodeType": "Return",
+                  "src": "481:17:3"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 575,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "getScraps",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 567,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "440:2:3"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 571,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 570,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 575,
+                  "src": "463:6:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint256_$dyn_memory_ptr",
+                    "typeString": "uint256[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 568,
+                      "name": "uint",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "463:4:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "id": 569,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "463:6:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                      "typeString": "uint256[]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "462:8:3"
+            },
+            "scope": 605,
+            "src": "422:83:3",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 594,
+              "nodeType": "Block",
+              "src": "578:72:3",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "components": [
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "baseExpression": {
+                            "argumentTypes": null,
+                            "id": 584,
+                            "name": "scraps",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 529,
+                            "src": "596:6:3",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Scrap_$525_storage_$",
+                              "typeString": "mapping(uint256 => struct Scrappage.Scrap storage ref)"
+                            }
+                          },
+                          "id": 586,
+                          "indexExpression": {
+                            "argumentTypes": null,
+                            "id": 585,
+                            "name": "_carid",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 577,
+                            "src": "603:6:3",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          },
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "nodeType": "IndexAccess",
+                          "src": "596:14:3",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_Scrap_$525_storage",
+                            "typeString": "struct Scrappage.Scrap storage ref"
+                          }
+                        },
+                        "id": 587,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "carid",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 522,
+                        "src": "596:20:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "baseExpression": {
+                            "argumentTypes": null,
+                            "id": 588,
+                            "name": "scraps",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 529,
+                            "src": "618:6:3",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Scrap_$525_storage_$",
+                              "typeString": "mapping(uint256 => struct Scrappage.Scrap storage ref)"
+                            }
+                          },
+                          "id": 590,
+                          "indexExpression": {
+                            "argumentTypes": null,
+                            "id": 589,
+                            "name": "_carid",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 577,
+                            "src": "625:6:3",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          },
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "nodeType": "IndexAccess",
+                          "src": "618:14:3",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_Scrap_$525_storage",
+                            "typeString": "struct Scrappage.Scrap storage ref"
+                          }
+                        },
+                        "id": 591,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "scrapDate",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 524,
+                        "src": "618:24:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      }
+                    ],
+                    "id": 592,
+                    "isConstant": false,
+                    "isInlineArray": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "TupleExpression",
+                    "src": "595:48:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$_t_uint256_$_t_bytes32_$",
+                      "typeString": "tuple(uint256,bytes32)"
+                    }
+                  },
+                  "functionReturnParameters": 583,
+                  "id": 593,
+                  "nodeType": "Return",
+                  "src": "588:55:3"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 595,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "getScrap",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 578,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 577,
+                  "name": "_carid",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 595,
+                  "src": "529:11:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 576,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "529:4:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "528:13:3"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 583,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 580,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 595,
+                  "src": "563:4:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 579,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "563:4:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 582,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 595,
+                  "src": "569:7:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 581,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "569:7:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "562:15:3"
+            },
+            "scope": 605,
+            "src": "511:139:3",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 603,
+              "nodeType": "Block",
+              "src": "706:41:3",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "expression": {
+                      "argumentTypes": null,
+                      "id": 600,
+                      "name": "scrapAccts",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 532,
+                      "src": "723:10:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_array$_t_uint256_$dyn_storage",
+                        "typeString": "uint256[] storage ref"
+                      }
+                    },
+                    "id": 601,
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "memberName": "length",
+                    "nodeType": "MemberAccess",
+                    "referencedDeclaration": null,
+                    "src": "723:17:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 599,
+                  "id": 602,
+                  "nodeType": "Return",
+                  "src": "716:24:3"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 604,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "countScraps",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 596,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "676:2:3"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 599,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 598,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 604,
+                  "src": "700:4:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 597,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "700:4:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "699:6:3"
+            },
+            "scope": 605,
+            "src": "656:91:3",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 606,
+        "src": "25:726:3"
+      }
+    ],
+    "src": "0:752:3"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/johnsgeorge/Desktop/CarApplication/CarBackEnd/contracts/Scappage.sol",
+    "exportedSymbols": {
+      "Scrappage": [
+        605
+      ]
+    },
+    "id": 606,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 520,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".18"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:3"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 605,
+        "linearizedBaseContracts": [
+          605
+        ],
+        "name": "Scrappage",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "Scrappage.Scrap",
+            "id": 525,
+            "members": [
+              {
+                "constant": false,
+                "id": 522,
+                "name": "carid",
+                "nodeType": "VariableDeclaration",
+                "scope": 525,
+                "src": "74:10:3",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 521,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "74:4:3",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 524,
+                "name": "scrapDate",
+                "nodeType": "VariableDeclaration",
+                "scope": 525,
+                "src": "94:17:3",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes32",
+                  "typeString": "bytes32"
+                },
+                "typeName": {
+                  "id": 523,
+                  "name": "bytes32",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "94:7:3",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "Scrap",
+            "nodeType": "StructDefinition",
+            "scope": 605,
+            "src": "51:67:3",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 529,
+            "name": "scraps",
+            "nodeType": "VariableDeclaration",
+            "scope": 605,
+            "src": "123:30:3",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Scrap_$525_storage_$",
+              "typeString": "mapping(uint256 => struct Scrappage.Scrap)"
+            },
+            "typeName": {
+              "id": 528,
+              "keyType": {
+                "id": 526,
+                "name": "uint",
+                "nodeType": "ElementaryTypeName",
+                "src": "132:4:3",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "123:23:3",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Scrap_$525_storage_$",
+                "typeString": "mapping(uint256 => struct Scrappage.Scrap)"
+              },
+              "valueType": {
+                "contractScope": null,
+                "id": 527,
+                "name": "Scrap",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 525,
+                "src": "140:5:3",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_Scrap_$525_storage_ptr",
+                  "typeString": "struct Scrappage.Scrap"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 532,
+            "name": "scrapAccts",
+            "nodeType": "VariableDeclaration",
+            "scope": 605,
+            "src": "159:24:3",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_uint256_$dyn_storage",
+              "typeString": "uint256[]"
+            },
+            "typeName": {
+              "baseType": {
+                "id": 530,
+                "name": "uint",
+                "nodeType": "ElementaryTypeName",
+                "src": "159:4:3",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              },
+              "id": 531,
+              "length": null,
+              "nodeType": "ArrayTypeName",
+              "src": "159:6:3",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                "typeString": "uint256[]"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 565,
+              "nodeType": "Block",
+              "src": "256:160:3",
+              "statements": [
+                {
+                  "assignments": [
+                    540
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 540,
+                      "name": "scrap",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 566,
+                      "src": "266:19:3",
+                      "stateVariable": false,
+                      "storageLocation": "storage",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Scrap_$525_storage_ptr",
+                        "typeString": "struct Scrappage.Scrap"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 539,
+                        "name": "Scrap",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 525,
+                        "src": "266:5:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Scrap_$525_storage_ptr",
+                          "typeString": "struct Scrappage.Scrap"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 544,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "baseExpression": {
+                      "argumentTypes": null,
+                      "id": 541,
+                      "name": "scraps",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 529,
+                      "src": "288:6:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Scrap_$525_storage_$",
+                        "typeString": "mapping(uint256 => struct Scrappage.Scrap storage ref)"
+                      }
+                    },
+                    "id": 543,
+                    "indexExpression": {
+                      "argumentTypes": null,
+                      "id": 542,
+                      "name": "_carid",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 534,
+                      "src": "295:6:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "IndexAccess",
+                    "src": "288:14:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Scrap_$525_storage",
+                      "typeString": "struct Scrappage.Scrap storage ref"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "266:36:3"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 549,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 545,
+                        "name": "scrap",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 540,
+                        "src": "313:5:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Scrap_$525_storage_ptr",
+                          "typeString": "struct Scrappage.Scrap storage pointer"
+                        }
+                      },
+                      "id": 547,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "carid",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 522,
+                      "src": "313:11:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 548,
+                      "name": "_carid",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 534,
+                      "src": "327:6:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "313:20:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 550,
+                  "nodeType": "ExpressionStatement",
+                  "src": "313:20:3"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 555,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 551,
+                        "name": "scrap",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 540,
+                        "src": "343:5:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Scrap_$525_storage_ptr",
+                          "typeString": "struct Scrappage.Scrap storage pointer"
+                        }
+                      },
+                      "id": 553,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "scrapDate",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 524,
+                      "src": "343:15:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes32",
+                        "typeString": "bytes32"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 554,
+                      "name": "_scrapDate",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 536,
+                      "src": "361:10:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes32",
+                        "typeString": "bytes32"
+                      }
+                    },
+                    "src": "343:28:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "id": 556,
+                  "nodeType": "ExpressionStatement",
+                  "src": "343:28:3"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    },
+                    "id": 563,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "id": 560,
+                          "name": "_carid",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 534,
+                          "src": "399:6:3",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 557,
+                          "name": "scrapAccts",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 532,
+                          "src": "383:10:3",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_array$_t_uint256_$dyn_storage",
+                            "typeString": "uint256[] storage ref"
+                          }
+                        },
+                        "id": 559,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "push",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": null,
+                        "src": "383:15:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_arraypush_nonpayable$_t_uint256_$returns$_t_uint256_$",
+                          "typeString": "function (uint256) returns (uint256)"
+                        }
+                      },
+                      "id": 561,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "383:23:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "-",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "hexValue": "31",
+                      "id": 562,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "408:1:3",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_1_by_1",
+                        "typeString": "int_const 1"
+                      },
+                      "value": "1"
+                    },
+                    "src": "383:26:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 564,
+                  "nodeType": "ExpressionStatement",
+                  "src": "383:26:3"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 566,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "setScraps",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 537,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 534,
+                  "name": "_carid",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 566,
+                  "src": "209:11:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 533,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "209:4:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 536,
+                  "name": "_scrapDate",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 566,
+                  "src": "222:18:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 535,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "222:7:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "208:33:3"
+            },
+            "payable": true,
+            "returnParameters": {
+              "id": 538,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "256:0:3"
+            },
+            "scope": 605,
+            "src": "190:226:3",
+            "stateMutability": "payable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 574,
+              "nodeType": "Block",
+              "src": "471:34:3",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 572,
+                    "name": "scrapAccts",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 532,
+                    "src": "488:10:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_uint256_$dyn_storage",
+                      "typeString": "uint256[] storage ref"
+                    }
+                  },
+                  "functionReturnParameters": 571,
+                  "id": 573,
+                  "nodeType": "Return",
+                  "src": "481:17:3"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 575,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "getScraps",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 567,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "440:2:3"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 571,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 570,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 575,
+                  "src": "463:6:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint256_$dyn_memory_ptr",
+                    "typeString": "uint256[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 568,
+                      "name": "uint",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "463:4:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "id": 569,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "463:6:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                      "typeString": "uint256[]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "462:8:3"
+            },
+            "scope": 605,
+            "src": "422:83:3",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 594,
+              "nodeType": "Block",
+              "src": "578:72:3",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "components": [
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "baseExpression": {
+                            "argumentTypes": null,
+                            "id": 584,
+                            "name": "scraps",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 529,
+                            "src": "596:6:3",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Scrap_$525_storage_$",
+                              "typeString": "mapping(uint256 => struct Scrappage.Scrap storage ref)"
+                            }
+                          },
+                          "id": 586,
+                          "indexExpression": {
+                            "argumentTypes": null,
+                            "id": 585,
+                            "name": "_carid",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 577,
+                            "src": "603:6:3",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          },
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "nodeType": "IndexAccess",
+                          "src": "596:14:3",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_Scrap_$525_storage",
+                            "typeString": "struct Scrappage.Scrap storage ref"
+                          }
+                        },
+                        "id": 587,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "carid",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 522,
+                        "src": "596:20:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "baseExpression": {
+                            "argumentTypes": null,
+                            "id": 588,
+                            "name": "scraps",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 529,
+                            "src": "618:6:3",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Scrap_$525_storage_$",
+                              "typeString": "mapping(uint256 => struct Scrappage.Scrap storage ref)"
+                            }
+                          },
+                          "id": 590,
+                          "indexExpression": {
+                            "argumentTypes": null,
+                            "id": 589,
+                            "name": "_carid",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 577,
+                            "src": "625:6:3",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          },
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "nodeType": "IndexAccess",
+                          "src": "618:14:3",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_Scrap_$525_storage",
+                            "typeString": "struct Scrappage.Scrap storage ref"
+                          }
+                        },
+                        "id": 591,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "scrapDate",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 524,
+                        "src": "618:24:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      }
+                    ],
+                    "id": 592,
+                    "isConstant": false,
+                    "isInlineArray": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "TupleExpression",
+                    "src": "595:48:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$_t_uint256_$_t_bytes32_$",
+                      "typeString": "tuple(uint256,bytes32)"
+                    }
+                  },
+                  "functionReturnParameters": 583,
+                  "id": 593,
+                  "nodeType": "Return",
+                  "src": "588:55:3"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 595,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "getScrap",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 578,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 577,
+                  "name": "_carid",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 595,
+                  "src": "529:11:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 576,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "529:4:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "528:13:3"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 583,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 580,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 595,
+                  "src": "563:4:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 579,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "563:4:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 582,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 595,
+                  "src": "569:7:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 581,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "569:7:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "562:15:3"
+            },
+            "scope": 605,
+            "src": "511:139:3",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 603,
+              "nodeType": "Block",
+              "src": "706:41:3",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "expression": {
+                      "argumentTypes": null,
+                      "id": 600,
+                      "name": "scrapAccts",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 532,
+                      "src": "723:10:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_array$_t_uint256_$dyn_storage",
+                        "typeString": "uint256[] storage ref"
+                      }
+                    },
+                    "id": 601,
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "memberName": "length",
+                    "nodeType": "MemberAccess",
+                    "referencedDeclaration": null,
+                    "src": "723:17:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 599,
+                  "id": 602,
+                  "nodeType": "Return",
+                  "src": "716:24:3"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 604,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "countScraps",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 596,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "676:2:3"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 599,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 598,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 604,
+                  "src": "700:4:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 597,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "700:4:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "699:6:3"
+            },
+            "scope": 605,
+            "src": "656:91:3",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 606,
+        "src": "25:726:3"
+      }
+    ],
+    "src": "0:752:3"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.24+commit.e67f0147.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "2.0.0",
+  "updatedAt": "2018-07-30T18:34:02.509Z"
+}

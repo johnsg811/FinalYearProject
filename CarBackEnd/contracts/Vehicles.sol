@@ -3,7 +3,7 @@ contract Vehicles {
 
     struct Car {
         uint carid;
-        string model;
+        bytes32 model;
         int year;
         int value;
         bool active;
@@ -12,7 +12,7 @@ contract Vehicles {
     mapping (uint => Car) c;
     uint[] public carAccts;
 
-    function setCar(uint _carid, string _model, int _year, int _value, bool _active, uint _mid) public payable{
+    function setCar(uint _carid, bytes32 _model, int _year, int _value, bool _active, uint _mid) public payable{
         Car storage cars = c[_carid];
 
         cars.carid = _carid;
@@ -28,7 +28,7 @@ contract Vehicles {
         return carAccts;
     }
 
-    function getCar(uint _carid) view public returns (uint, string, int, int, bool, uint) {
+    function getCar(uint _carid) view public returns (uint, bytes32, int, int, bool, uint) {
         return (c[_carid].carid, c[_carid].model, c[_carid].year, c[_carid].value, c[_carid].active, c[_carid].mid);
     }
 
@@ -37,7 +37,7 @@ contract Vehicles {
     }
 
 
-    function getVehicleByModel(string _model) view public returns (uint, string, int, int, bool, uint) {
+    function getVehicleByModel(bytes32 _model) view public returns (uint, bytes32, int, int, bool, uint) {
         uint carsCount = carAccts.length;
         uint vehicleid;
         for (uint i=0; i<carsCount; i++) {
