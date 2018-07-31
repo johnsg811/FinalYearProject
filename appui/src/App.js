@@ -3,6 +3,10 @@ import logo from './logo.svg';
 import './App.css';
 import {AddManufacturerForm} from "./addManufacturerForm";
 import {AddVehicles} from "./addVehiclesForm";
+import {AddScrappageForm} from "./AddScrappageForm";
+import {AddDealers} from "./AddDealers";
+import {AddTransactionForm} from "./AddTransactionForm";
+import {AddCustomersForm} from "./AddCustomersForm";
 import {Welcome} from "./welcome";
 import {ViewVehicleInfo} from "./viewVehicleInfo"
 
@@ -15,7 +19,7 @@ class App extends Component {
           <h1 className="App-title">Welcome to React</h1>
         </header>
         <br />
-         <AddVehicles />
+         <AddCustomersForm />
       </div>
     );
   }

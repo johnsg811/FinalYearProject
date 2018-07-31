@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { dealerContract } from "./setup";
+import { customerContract } from "./setup";
 export class AddCustomersForm extends Component{
 
 	constructor(props) {
@@ -36,35 +36,35 @@ export class AddCustomersForm extends Component{
 	            	<hr />
 		            <form onSubmit={this.handleSubmit}>
 		            	<div class="form-group">
-		            		<label for="did">ID</label>
+		            		<label for="CustomerID">ID</label>
 						    <input type="number" name = "cid" value={this.state.cid} onChange={this.handleChange} class="form-control" placeholder="Enter ID" required/>
 		            	</div>
 		            	<div class="form-group">
-		            		<label for="did">Name</label>
+		            		<label for="CustomerName">Name</label>
 						    <input type="text" name = "cname" value={this.state.cname} onChange={this.handleChange} class="form-control" placeholder="Enter Name" />
 		            	</div>
 		            	<div class="form-group">
-		            		<label for="did">DateOfBirth</label>
+		            		<label for="DateOfBirth">DateOfBirth</label>
 						    <input type="text" name = "cdob" value={this.state.cdob} onChange={this.handleChange} class="form-control" placeholder="Date of Birth" />
 		            	</div>
 									<div class="form-group">
-		            		<label for="did">LicenceNumber</label>
+		            		<label for="LicenceNumber">LicenceNumber</label>
 						    <input type="number" name = "clicencenum" value={this.state.clicencenum} onChange={this.handleChange} class="form-control" placeholder="Enter Licence Number" />
 		            	</div>
 		            	<div class="form-group">
-		            		<label for="did">Street</label>
-						    <input type="number" name = "dstreet" value={this.state.dstreet} onChange={this.handleChange} class="form-control" placeholder="Enter Street" />
+		            		<label for="Street">Street</label>
+						    <input type="text" name = "dstreet" value={this.state.dstreet} onChange={this.handleChange} class="form-control" placeholder="Enter Street" />
 		            	</div>
 		            	<div class="form-group">
-		            		<label for="did">Town</label>
-						    <input type="email" name = "dtown" value={this.state.dtown} onChange={this.handleChange} class="form-control" placeholder="Enter Town" />
+		            		<label for="Town">Town</label>
+						    <input type="text" name = "dtown" value={this.state.dtown} onChange={this.handleChange} class="form-control" placeholder="Enter Town" />
 		            	</div>
 		            	<div class="form-group">
-		            		<label for="did">County</label>
-						    <input type="email" name = "dcounty" value={this.state.dcounty} onChange={this.handleChange} class="form-control" placeholder="Enter County" />
+		            		<label for="County">County</label>
+						    <input type="text" name = "dcounty" value={this.state.dcounty} onChange={this.handleChange} class="form-control" placeholder="Enter County" />
 		            	</div>
 		            	<div class="form-group">
-		            		<label for="did">Submit</label>
+		            		<label for="Submit">Submit</label>
 						    <input type="text" type="Submit" class="form-control"  />
 		            	</div>
 		            </form>
@@ -74,4 +74,4 @@ export class AddCustomersForm extends Component{
     }
 }
 
-export default AddCustomers;
+export default AddCustomersForm;

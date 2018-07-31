@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { manufacturerContract } from "./setup";
+import { scrappageContract } from "./setup";
 export class AddScrappageForm extends Component{
 
 	constructor(props) {
@@ -41,30 +41,18 @@ export class AddScrappageForm extends Component{
 						    <input type="number" name = "carid" value={this.state.carid} onChange={this.handleChange} class="form-control" placeholder="Enter VehileID" required/>
 		            	</div>
 		            	<div class="form-group">
-		            		<label for="manufacturerId">Scappage Date</label>
+		            		<label for="ScrappageDate">Scappage Date</label>
 						    <input type="text" name = "scrapDate" value={this.state.scrapDate} onChange={this.handleChange} class="form-control" placeholder="Enter Scappage Date" />
 		            	</div>
 		            	<div class="form-group">
-		            		<label for="manufacturerId">Country</label>
-						    <input type="text" name = "country" value={this.state.country} onChange={this.handleChange} class="form-control" placeholder="Enter Country" />
-		            	</div>
-		            	<div class="form-group">
-		            		<label for="manufacturerId">Phone</label>
-						    <input type="number" name = "phone" value={this.state.phone} onChange={this.handleChange} class="form-control" placeholder="Enter Phone" />
-		            	</div>
-		            	<div class="form-group">
-		            		<label for="manufacturerId">Website</label>
-						    <input type="email" name = "website" value={this.state.website} onChange={this.handleChange} class="form-control" placeholder="Enter Website" />
-		            	</div>
-		            	<div class="form-group">
-		            		<label for="manufacturerId">Website</label>
+		            		<label for="Submit">Website</label>
 						    <input type="text" type="Submit" class="form-control"  />
 		            	</div>
 		            </form>
 		        </div>
           	</div>
         )
-    } 
+    }
 }
 
-export default AddManufacturer;
+export default AddScrappageForm;

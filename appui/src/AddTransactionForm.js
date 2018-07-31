@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import web3 from 'web3';
 import { vehicleContract } from "./setup";
 import { manufacturerContract } from "./setup";
+import { transactionContract } from "./setup";
 import {FormControl} from 'react-bootstrap'
 export class AddTransactionForm extends Component{
 
@@ -21,8 +22,8 @@ export class AddTransactionForm extends Component{
 
   	handleSubmit(event) {
 		// alert('A name was submitted: '+ this.state.country+ this.state.id);
-		dealerContract.setBrand(this.state.tid,this.state.tdate,this.state.did,this.state.carid,this.state.cid,this.state.buyOrSell,this.state.tamount,this.state.tmileage,{gas: 1000000});
-		let value = dealerContract.getDealer(this.state.did,{gas: 1000000});
+		transactionContract.setTransaction(this.state.tid,this.state.tdate,this.state.did,this.state.carid,this.state.cid,this.state.buyOrSell,this.state.tamount,this.state.tmileage,{gas: 1000000});
+		let value = transactionContract.getTransactionDetail(this.state.did,{gas: 1000000});
 		//web3.toAscii(value[1])
 		event.preventDefault();
 	}
@@ -41,42 +42,42 @@ export class AddTransactionForm extends Component{
 	            	<hr />
 		            <form onSubmit={this.handleSubmit}>
 		            	<div class="form-group">
-		            		<label for="did">TransactionID</label>
+		            		<label for="TransactionID">TransactionID</label>
 						    		<input type="number" name = "tid" value={this.state.tid} onChange={this.handleChange} class="form-control" placeholder="Enter Transaction ID" required/>
 		            	</div>
 		            	<div class="form-group">
-		            		<label for="did">Date</label>
+		            		<label for="TransactionDate">TransactionDate</label>
 						    		<input type="text" name = "tdate" value={this.state.tdate} onChange={this.handleChange} class="form-control" placeholder="Transaction Date" />
 		            	</div>
 		            	<div class="form-group">
-		            		<label for="did">DealerID</label>
-						    		<input type="text" name = "did" value={this.state.did} onChange={this.handleChange} class="form-control" placeholder="Enter Dealer ID" />
+		            		<label for="DealerID">DealerID</label>
+						    		<input type="number" name = "did" value={this.state.did} onChange={this.handleChange} class="form-control" placeholder="Enter Dealer ID" />
 		            	</div>
 		            	<div class="form-group">
-		            		<label for="did">CarID</label>
+		            		<label for="CarID">CarID</label>
 						    		<input type="number" name = "carid" value={this.state.cid} onChange={this.handleChange} class="form-control" placeholder="Enter Consumer ID" />
 		            	</div>
 		            	<div class="form-group">
-		            		<label for="did">ConsumerID</label>
+		            		<label for="ConsumerID">ConsumerID</label>
 						    		<input type="email" name = "cid" value={this.state.dtown} onChange={this.handleChange} class="form-control" placeholder="Enter Town" />
 		            	</div>
 									<div class="form-group">
-										<label for="value">Buy Or Sell</label>
+										<label for="BuyOrSell">Buy Or Sell</label>
 											<select class="form-control" id="buyOrSell">
 												<option>Buy</option>
 												<option>Sell</option>
 											</select>
 		            	</div>
 									<div class="form-group">
-		            		<label for="did">TransactionAmount</label>
-						    		<input type="email" name = "tamount" value={this.state.tamount} onChange={this.handleChange} class="form-control" placeholder="Transaction Amount" />
+		            		<label for="TransactionAmount">TransactionAmount</label>
+						    		<input type="number" name = "tamount" value={this.state.tamount} onChange={this.handleChange} class="form-control" placeholder="Transaction Amount" />
 		            	</div>
 									<div class="form-group">
-		            		<label for="did">VehicleMileage</label>
-						    		<input type="email" name = "tmileage" value={this.state.tmileage} onChange={this.handleChange} class="form-control" placeholder="Vehicle Mileage" />
+		            		<label for="VehicleMileage">VehicleMileage</label>
+						    		<input type="number" name = "tmileage" value={this.state.tmileage} onChange={this.handleChange} class="form-control" placeholder="Vehicle Mileage" />
 		            	</div>
 		            	<div class="form-group">
-		            		<label for="did">Transaction Submit</label>
+		            		<label for="Submit">Transaction Submit</label>
 						    		<input type="text" type="Submit" class="form-control"  />
 		            	</div>
 		            </form>
@@ -86,4 +87,4 @@ export class AddTransactionForm extends Component{
     }
 }
 
-export default AddTransaction;
+export default AddTransactionForm;

@@ -16,7 +16,7 @@ export class AddDealers extends Component{
 
   	handleSubmit(event) {
 		// alert('A name was submitted: '+ this.state.country+ this.state.id);
-		dealerContract.setBrand(this.state.did,this.state.dname,this.state.dphone,this.state.dstreet,this.state.dtown,this.state.dcounty,{gas: 1000000});
+		dealerContract.setDealer(this.state.did,this.state.dname,this.state.dphone,this.state.dstreet,this.state.dtown,this.state.dcounty,{gas: 1000000});
 		let value = dealerContract.getDealer(this.state.did,{gas: 1000000});
 		//web3.toAscii(value[1])
 		event.preventDefault();
@@ -40,27 +40,27 @@ export class AddDealers extends Component{
 						    <input type="number" name = "did" value={this.state.did} onChange={this.handleChange} class="form-control" placeholder="Enter ID" required/>
 		            	</div>
 		            	<div class="form-group">
-		            		<label for="did">Name</label>
+		            		<label for="DealerName">Name</label>
 						    <input type="text" name = "dname" value={this.state.dname} onChange={this.handleChange} class="form-control" placeholder="Enter Name" />
 		            	</div>
 		            	<div class="form-group">
-		            		<label for="did">Phone</label>
+		            		<label for="DealerPhone">Phone</label>
 						    <input type="text" name = "dphone" value={this.state.dphone} onChange={this.handleChange} class="form-control" placeholder="Enter Phone" />
 		            	</div>
 		            	<div class="form-group">
-		            		<label for="did">Street</label>
+		            		<label for="DealerStreet">Street</label>
 						    <input type="number" name = "dstreet" value={this.state.dstreet} onChange={this.handleChange} class="form-control" placeholder="Enter Strret" />
 		            	</div>
 		            	<div class="form-group">
-		            		<label for="did">Town</label>
+		            		<label for="DealerTown">Town</label>
 						    <input type="email" name = "dtown" value={this.state.dtown} onChange={this.handleChange} class="form-control" placeholder="Enter Town" />
 		            	</div>
 		            	<div class="form-group">
-		            		<label for="did">County</label>
+		            		<label for="DealerCounty">County</label>
 						    <input type="email" name = "dcounty" value={this.state.dcounty} onChange={this.handleChange} class="form-control" placeholder="Enter County" />
 		            	</div>
 		            	<div class="form-group">
-		            		<label for="did">County</label>
+		            		<label for="Submit">Submit</label>
 						    <input type="text" type="Submit" class="form-control"  />
 		            	</div>
 		            </form>
