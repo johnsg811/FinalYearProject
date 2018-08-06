@@ -11,6 +11,11 @@ contract Manufacturer {
     mapping (uint => Brand) brands;
     uint[] public BrandAccts;
 
+    constructor(bytes32[] args) public {
+      setBrand(1001, stringToBytes32("BMW"), stringToBytes32("Germany"), 1234567, stringToBytes32("Test@test.com"));
+      setBrand(1002, stringToBytes32("Rolls Royce"), stringToBytes32("UK"), 1234568, stringToBytes32("TestUK@test.com"));
+    }
+
     function setBrand(uint _mid, bytes32 _name, bytes32 _country, int _phone, bytes32 _website) public payable{
         Brand storage branding = brands[_mid];
 
@@ -50,5 +55,14 @@ contract Manufacturer {
 
     }
 
+    function stringToBytes32(string memory source) returns (bytes32 result) {
+      bytes memory tempEmptyStringTest = bytes(source);
+      if (tempEmptyStringTest.length == 0) {
+          return 0x0;
+      }
 
+      assembly {
+          result := mload(add(source, 32))
+      }
+    }
 }

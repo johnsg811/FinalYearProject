@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import { dealerContract } from "./setup";
-export class AddDealers extends Component{
+// import { serviceCenterContract } from "./setup";
+export class AddServiceCenter extends Component{
 
 	constructor(props) {
 	    super(props);
-	    this.state = {did: '',dname: '', dphone:'', dstreet:'', dtown:'', dcounty:''};
+	    this.state = {SCid: '',SCname: '', SCphone:'', SCstreet:'', SCtown:'', SCcounty:''};
 	    this.handleChange = this.handleChange.bind(this);
 	    this.handleSubmit = this.handleSubmit.bind(this);
   	}
@@ -16,8 +16,10 @@ export class AddDealers extends Component{
 
   	handleSubmit(event) {
 		// alert('A name was submitted: '+ this.state.country+ this.state.id);
-		dealerContract.setDealer(this.state.did,this.state.dname,this.state.dphone,this.state.dstreet,this.state.dtown,this.state.dcounty,{gas: 1000000});
-		let value = dealerContract.getDealer(this.state.did,{gas: 1000000});
+
+		// dealerContract.setServiceCent(this.state.SCid,this.state.SCname,this.state.SCphone,this.state.SCstreet,this.state.SCtown,this.state.SCcounty,{gas: 1000000});
+		// let value = dealerContract.getServiceCent(this.state.did,{gas: 1000000});
+    
 		//web3.toAscii(value[1])
 		event.preventDefault();
 	}
@@ -32,32 +34,32 @@ export class AddDealers extends Component{
 	            <div class="col-md-4">
 	        	</div>
 	        	<div class="col-md-4">
-	            	<h3> Dealer Details</h3>
+	            	<h3> Service Center Details</h3>
 	            	<hr />
 		            <form onSubmit={this.handleSubmit}>
 		            	<div class="form-group">
-		            		<label for="did">ID</label>
-						    <input type="number" name = "did" value={this.state.did} onChange={this.handleChange} class="form-control" placeholder="Enter ID" required/>
+		            		<label for="SCid">SCID</label>
+						    <input type="number" name = "SCid" value={this.state.SCid} onChange={this.handleChange} class="form-control" placeholder="Enter ID" required/>
 		            	</div>
 		            	<div class="form-group">
-		            		<label for="DealerName">Name</label>
-						    <input type="text" name = "dname" value={this.state.dname} onChange={this.handleChange} class="form-control" placeholder="Enter Name" />
+		            		<label for="SCname">Name</label>
+						    <input type="text" name = "SCname" value={this.state.SCname} onChange={this.handleChange} class="form-control" placeholder="Enter ServiceCenter Name" />
 		            	</div>
 		            	<div class="form-group">
-		            		<label for="DealerPhone">Phone</label>
-						    <input type="number" name = "dphone" value={this.state.dphone} onChange={this.handleChange} class="form-control" placeholder="Enter Phone" />
+		            		<label for="SCphone">Phone</label>
+						    <input type="number" name = "SCphone" value={this.state.SCphone} onChange={this.handleChange} class="form-control" placeholder="Enter Phone" />
 		            	</div>
 		            	<div class="form-group">
-		            		<label for="DealerStreet">Street</label>
+		            		<label for="SCstreet">Street</label>
 						    <input type="text" name = "dstreet" value={this.state.dstreet} onChange={this.handleChange} class="form-control" placeholder="Enter Strret" />
 		            	</div>
 		            	<div class="form-group">
-		            		<label for="DealerTown">Town</label>
-						    <input type="text" name = "dtown" value={this.state.dtown} onChange={this.handleChange} class="form-control" placeholder="Enter Town" />
+		            		<label for="SCtown">Town</label>
+						    <input type="text" name = "SCtown" value={this.state.SCtown} onChange={this.handleChange} class="form-control" placeholder="Enter Town" />
 		            	</div>
 		            	<div class="form-group">
-		            		<label for="DealerCounty">County</label>
-						    <input type="text" name = "dcounty" value={this.state.dcounty} onChange={this.handleChange} class="form-control" placeholder="Enter County" />
+		            		<label for="SCcounty">County</label>
+						    <input type="text" name = "SCcounty" value={this.state.SCcounty} onChange={this.handleChange} class="form-control" placeholder="Enter County" />
 		            	</div>
 		            	<div class="form-group">
 		            		<label for="Submit">Submit</label>
@@ -70,4 +72,4 @@ export class AddDealers extends Component{
     }
 }
 
-export default AddDealers;
+export default AddServiceCenter;

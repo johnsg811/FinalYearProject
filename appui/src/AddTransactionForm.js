@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
+import DatePicker from 'react-datepicker';
+import moment from 'moment';
+import 'react-datepicker/dist/react-datepicker.css';
 import web3 from 'web3';
 import { vehicleContract } from "./setup";
 import { manufacturerContract } from "./setup";
 import { transactionContract } from "./setup";
-import {FormControl} from 'react-bootstrap'
+import {FormControl} from 'react-bootstrap';
+// import $ from 'jquery';
 export class AddTransactionForm extends Component{
 
 	constructor(props) {
@@ -15,15 +19,27 @@ export class AddTransactionForm extends Component{
 	    this.handleSubmit = this.handleSubmit.bind(this);
   	}
 
+		componentDidMount() {
+
+	  }
+
 	handleChange(event) {
-		var targetName = event.target.name;
+		if(event.target){
+			var targetName = event.target.name;
     	this.setState({[targetName]: event.target.value});
-  	}
+		}
+		else{
+			var targetName = 'tdate';
+			this.setState({[targetName]: event});
+
+		}
+  }
 
   	handleSubmit(event) {
 		// alert('A name was submitted: '+ this.state.country+ this.state.id);
-		transactionContract.setTransaction(this.state.tid,this.state.tdate,this.state.did,this.state.carid,this.state.cid,this.state.buyOrSell,this.state.tamount,this.state.tmileage,{gas: 1000000});
-		let value = transactionContract.getTransactionDetail(this.state.did,{gas: 1000000});
+		var date = (this.state.tdate._d.getTime()/1000);
+		transactionContract.setTransaction(this.state.tid,date,this.state.did,this.state.carid,this.state.cid,this.state.buyOrSell,this.state.tamount,this.state.tmileage,{gas: 1000000});
+		let value = transactionContract.getTransactionDetail(this.state.tid,{gas: 1000000});
 		//web3.toAscii(value[1])
 		event.preventDefault();
 	}
@@ -41,29 +57,29 @@ export class AddTransactionForm extends Component{
 	            	<h3> Transaction Details</h3>
 	            	<hr />
 		            <form onSubmit={this.handleSubmit}>
-		            	<div class="form-group">
+		             	<div class="form-group">
 		            		<label for="TransactionID">TransactionID</label>
 						    		<input type="number" name = "tid" value={this.state.tid} onChange={this.handleChange} class="form-control" placeholder="Enter Transaction ID" required/>
-		            	</div>
+									</div>
 		            	<div class="form-group">
 		            		<label for="TransactionDate">TransactionDate</label>
-						    		<input type="text" name = "tdate" value={this.state.tdate} onChange={this.handleChange} class="form-control" placeholder="Transaction Date" />
-		            	</div>
+						    		<DatePicker selected={this.state.tdate} onChange={this.handleChange} />
+									</div>
 		            	<div class="form-group">
 		            		<label for="DealerID">DealerID</label>
 						    		<input type="number" name = "did" value={this.state.did} onChange={this.handleChange} class="form-control" placeholder="Enter Dealer ID" />
 		            	</div>
 		            	<div class="form-group">
 		            		<label for="CarID">CarID</label>
-						    		<input type="number" name = "carid" value={this.state.cid} onChange={this.handleChange} class="form-control" placeholder="Enter Consumer ID" />
+						    		<input type="number" name = "carid" value={this.state.carid} onChange={this.handleChange} class="form-control" placeholder="Enter Consumer ID" />
 		            	</div>
 		            	<div class="form-group">
 		            		<label for="ConsumerID">ConsumerID</label>
-						    		<input type="email" name = "cid" value={this.state.dtown} onChange={this.handleChange} class="form-control" placeholder="Enter Town" />
+						    		<input type="text" name = "cid" value={this.state.cid} onChange={this.handleChange} class="form-control" placeholder="Enter Town" />
 		            	</div>
 									<div class="form-group">
 										<label for="BuyOrSell">Buy Or Sell</label>
-											<select class="form-control" id="buyOrSell">
+											<select class="form-control" id="buyOrSell" name="buyOrSell" value={this.state.cid} onChange={this.handleChange}>
 												<option>Buy</option>
 												<option>Sell</option>
 											</select>

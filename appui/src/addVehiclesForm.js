@@ -71,7 +71,7 @@ export class AddVehicles extends Component{
 		            	</div>
 		            	<div class="form-group">
 		            		<label for="Year">Car Year</label>
-						    <input type="text" name = "year" value={this.state.year} onChange={this.handleChange} class="form-control" placeholder="Enter Year" />
+						    <input type="number" name = "year" value={this.state.year} onChange={this.handleChange} class="form-control" placeholder="Enter Year" />
 		            	</div>
 		            	<div class="form-group">
 		            		<label for="value">Car Value</label>
