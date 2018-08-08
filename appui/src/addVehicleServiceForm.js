@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import { dealerContract } from "./setup";
+import DatePicker from 'react-datepicker';
+import moment from 'moment';
+import 'react-datepicker/dist/react-datepicker.css';
 export class AddVehicleService extends Component{
 
 	constructor(props) {
@@ -10,14 +13,21 @@ export class AddVehicleService extends Component{
   	}
 
 	handleChange(event) {
-		var targetName = event.target.name;
+		if(event.target){
+			var targetName = event.target.name;
     	this.setState({[targetName]: event.target.value});
-  	}
+		}
+		else{
+			var targetName = 'Sdate';
+			this.setState({[targetName]: event});
+
+		}
+  }
 
   	handleSubmit(event) {
 		// alert('A name was submitted: '+ this.state.country+ this.state.id);
-
-		// dealerContract.setServicebyID(this.state.Sid,this.state.Sdate,this.state.SCid,this.state.carid,this.state.Smileage,this.state.SrepairDetails,this.state.Scost,{gas: 1000000});
+		var date = (this.state.Sdate._d.getTime()/1000);
+		// dealerContract.setServicebyID(this.state.Sid,date,this.state.SCid,this.state.carid,this.state.Smileage,this.state.SrepairDetails,this.state.Scost,{gas: 1000000});
 		// let value = dealerContract.getService(this.state.did,{gas: 1000000});
 
 		//web3.toAscii(value[1])
@@ -42,8 +52,8 @@ export class AddVehicleService extends Component{
 						    <input type="number" name = "Sid" value={this.state.Sid} onChange={this.handleChange} class="form-control" placeholder="Enter ID" required/>
 		            	</div>
 		            	<div class="form-group">
-		            		<label for="Servicedate">Name</label>
-						    <input type="date" name = "Sdate" value={this.state.Sdate} onChange={this.handleChange} class="form-control" placeholder="Enter Date" />
+		            		<label for="Servicedate">ServiceDate</label>
+										<DatePicker selected={this.state.Sdate} onChange={this.handleChange} />
 		            	</div>
 		            	<div class="form-group">
 		            		<label for="ServiceCenterid">Service CenterID</label>

@@ -49,3 +49,15 @@
     margin: auto;
     overflow: auto;
 }
+
+.divbox{
+  /*position: absolute;*/
+  /*text-align: center;*/
+  /*width: 100%;*/
+  top: 10%;
+  margin-top:10%;
+  color:white;
+  border: 1px solid transparent;
+  border-radius:3%;
+  background-color: rgba(219, 219, 214,0.4);
+}

@@ -43,16 +43,11 @@ export class AddVehicles extends Component{
 	  const manufacturerId = event.target.value;
 		this.state.manufacturerID = manufacturerId;
 	  const manufacturer = this.allManufact.find(u => u.id === manufacturerId);
-	  this.setState({
-	    value: manufacturer
-	  });
+	  // this.setState({
+	  //   value: manufacturer
+	  // });
 	}
     render(){
-        // let movieList=this.props.movies.map((movie,i)=>
-        // <tr key={i}>
-        //     <td onClick={this.handleChange.bind(this,movie.name)}>{movie.name}</td>
-        //     <td>{movie.rating}</td>
-        // </tr>)
         return(
             <div>
 	            <div class="col-md-4">

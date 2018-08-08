@@ -12,8 +12,16 @@ contract Manufacturer {
     uint[] public BrandAccts;
 
     constructor(bytes32[] args) public {
-      setBrand(1001, stringToBytes32("BMW"), stringToBytes32("Germany"), 1234567, stringToBytes32("Test@test.com"));
-      setBrand(1002, stringToBytes32("Rolls Royce"), stringToBytes32("UK"), 1234568, stringToBytes32("TestUK@test.com"));
+        setBrand(1001, stringToBytes32("BMW"), stringToBytes32("Germany"), 1234567, stringToBytes32("bmw@gmail.com"));
+        setBrand(1002, stringToBytes32("Rolls Royce"), stringToBytes32("UK"), 1234568, stringToBytes32("rolls-royce@gmail.com"));
+        setBrand(1003, stringToBytes32("Audi"), stringToBytes32("Germany"), 1234567, stringToBytes32("audi@gmail.com"));
+        setBrand(1004, stringToBytes32("Mercedes-Benz"), stringToBytes32("Germany"), 1234567, stringToBytes32("mercedes-benz@gmail.com"));
+        setBrand(1005, stringToBytes32("Land-Rover"), stringToBytes32("UK"), 1234567, stringToBytes32("land-rover@gmail.com"));
+        setBrand(1006, stringToBytes32("Porsche"), stringToBytes32("Germany"), 1234567, stringToBytes32("porsche@gmail.com"));
+        setBrand(1006, stringToBytes32("Bentley"), stringToBytes32("UK"), 1234567, stringToBytes32("bentley@gmail.com"));
+        setBrand(1008, stringToBytes32("Jaguar"), stringToBytes32("UK"), 1234567, stringToBytes32("jaguar@gmail.com"));
+        setBrand(1009, stringToBytes32("Lexus"), stringToBytes32("UK"), 1234567, stringToBytes32("lexus@gmail.com"));
+        setBrand(1010, stringToBytes32("Maserati"), stringToBytes32("UK"), 1234567, stringToBytes32("maserati@gmail.com"));
     }
 
     function setBrand(uint _mid, bytes32 _name, bytes32 _country, int _phone, bytes32 _website) public payable{
@@ -40,7 +48,7 @@ contract Manufacturer {
         return BrandAccts.length;
     }
 
-    function getManufacturerByName(bytes32 _name) view public returns (uint, bytes32, bytes32, int, bytes32) {
+    function getManufacturerByName(string _name) view public returns (uint, bytes32, bytes32, int, bytes32) {
         uint brandCount = BrandAccts.length;
         uint mid;
         for (uint i=0; i<brandCount; i++) {
@@ -65,4 +73,6 @@ contract Manufacturer {
           result := mload(add(source, 32))
       }
     }
+
+
 }

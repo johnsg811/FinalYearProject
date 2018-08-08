@@ -10,6 +10,7 @@ import {AddTransactionForm} from "./AddTransactionForm";
 import {AddCustomersForm} from "./AddCustomersForm";
 import {Welcome} from "./welcome";
 import {ViewVehicleInfo} from "./viewVehicleInfo";
+import {ViewVehicleDetails} from "./viewVehicleDetails";
 import {AddServiceCenter} from "./AddServiceCenterForm";
 import {AddVehicleService} from "./addVehicleServiceForm";
 import {ViewCustomer} from "./viewCustomer";
@@ -25,10 +26,13 @@ class App extends Component {
           <Route exact path="/" component={Home} />
           <Route path="/searchCustomer" component={ViewCustomer} />
           <Route path="/searchVehicle" component={ViewVehicleInfo} />
+          <Route path="/viewVehicleDetails/:id" component={ViewVehicleDetails} />
           <Route path="/addCustomer" component={AddCustomersForm} />
-          <Route path="/addTransaction" component={AddTransactionForm} />
+          <Route path="/addDealer" component={AddDealers} />
           <Route path="/addVehicle" component={AddVehicles} />
+          <Route path="/addTransaction" component={AddTransactionForm} />
           <Route path="/addManufacturer" component={AddManufacturerForm} />
+          <Route path="/addScrappage" component={AddScrappageForm} />
         </div>
       </Router>
     );

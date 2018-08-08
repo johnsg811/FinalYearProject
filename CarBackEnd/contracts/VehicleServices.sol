@@ -1,5 +1,5 @@
 pragma solidity ^0.4.18;
-contract VehicleServices {
+contract VehicleService {
 
     struct Service {
         uint Sid;
@@ -7,13 +7,14 @@ contract VehicleServices {
         uint SCid;
         uint carid;
         int Smileage;
+        bytes32 SrepairType;
         bytes32 SrepairDetails;
         int Scost;
     }
     mapping (uint => Service) services;
     uint[] public serviceAccts;
 
-    function setServicebyID(uint _Sid, int _Sdate, uint _SCid, uint _carid, int _Smileage, bytes32 _SrepairDetails, int _Scost) public payable{
+    function setServicebyID(uint _Sid, int _Sdate, uint _SCid, uint _carid, int _Smileage, bytes32 _SrepairType, bytes32 _SrepairDetails, int _Scost) public payable{
         Service storage service = services[_Sid];
 
         service.Sid = _Sid;
@@ -21,6 +22,7 @@ contract VehicleServices {
         service.SCid = _SCid;
         service.carid = _carid;
         service.Smileage = _Smileage;
+        service.SrepairType = _SrepairType;
         service.SrepairDetails = _SrepairDetails;
         service.Scost = _Scost;
 
@@ -31,8 +33,8 @@ contract VehicleServices {
         return serviceAccts;
     }
 
-    function getService(uint _Sid) view public returns (uint, int, int, bytes32, int) {
-        return (services[_Sid].Sid, services[_Sid].Sdate, services[_Sid].Smileage, services[_Sid].SrepairDetails, services[_Sid].Scost);
+    function getService(uint _Sid) view public returns (uint, int, int, bytes32, bytes32, int) {
+        return (services[_Sid].Sid, services[_Sid].Sdate, services[_Sid].Smileage, services[_Sid].SrepairType, services[_Sid].SrepairDetails, services[_Sid].Scost);
     }
 
     function getServiceRelations(uint _Sid) view public returns (uint, uint, uint) {

@@ -20,7 +20,9 @@ export class ViewVehicleInfo extends Component{
 
   	handleSubmit(event) {
 		// alert('A name was submitted: '+ this.state.country+ this.state.id);
-		this.vehicleInfo = vehicleContract.getCar(this.state.vehicleId,{gas: 1000000});
+		this.props.history.push('/viewVehicleDetails/'+this.state.vehicleId)
+		// window.location = targetName;
+		//this.vehicleInfo = vehicleContract.getCar(this.state.vehicleId,{gas: 1000000});
 		//let value = manufacturerContract.getBrand(this.state.id,{gas: 1000000});
 		//web3.toAscii(value[1])
 		event.preventDefault();

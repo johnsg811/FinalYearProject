@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import { customerContract } from "./setup";
+import DatePicker from 'react-datepicker';
+import moment from 'moment';
+import 'react-datepicker/dist/react-datepicker.css';
 export class AddCustomersForm extends Component{
 
 	constructor(props) {
@@ -11,13 +14,21 @@ export class AddCustomersForm extends Component{
   	}
 
 		handleChange(event) {
-			var targetName = event.target.name;
-    	this.setState({[targetName]: event.target.value});
+			if(event.target){
+				var targetName = event.target.name;
+	    	this.setState({[targetName]: event.target.value});
+			}
+			else{
+				var targetName = 'cdob';
+				this.setState({[targetName]: event});
+
+			}
   	}
 
   	handleSubmit(event) {
 			// alert('A name was submitted: '+ this.state.country+ this.state.id);
-			customerContract.setClient(this.state.cid,this.state.cname,this.state.cdob,this.state.clicencenum,this.state.dstreet,this.state.dtown,this.state.dcounty,{gas: 1000000});
+			var date = (this.state.cdob._d.getTime()/1000);
+			customerContract.setClient(this.state.cid,this.state.cname,date,this.state.clicencenum,this.state.dstreet,this.state.dtown,this.state.dcounty,{gas: 1000000});
 			let value = customerContract.getClient(this.state.did,{gas: 1000000});
 			//web3.toAscii(value[1])
 			event.preventDefault();
@@ -34,10 +45,10 @@ export class AddCustomersForm extends Component{
         //     <td>{movie.rating}</td>
         // </tr>)
         return(
-            <div class = "mainbody">
+            <div >
 	            <div class="col-md-4">
 	        		</div>
-	        	<div class="col-md-4">
+	        	<div class="col-md-4 divbox">
 	            	<h3> Customer Details</h3>
 	            	<hr />
 		            <form onSubmit={this.handleSubmit}>
@@ -51,7 +62,7 @@ export class AddCustomersForm extends Component{
 		            	</div>
 		            	<div class="form-group">
 		            		<label for="DateOfBirth">DateOfBirth</label>
-						    <input type="date" name = "cdob" value={this.state.cdob} onChange={this.handleChange} class="form-control" placeholder="Date of Birth" />
+										<DatePicker selected={this.state.cdob} onChange={this.handleChange} />
 		            	</div>
 									<div class="form-group">
 		            		<label for="LicenceNumber">LicenceNumber</label>

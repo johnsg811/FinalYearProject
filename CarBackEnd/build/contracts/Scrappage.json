@@ -21,6 +21,17 @@
       "type": "function"
     },
     {
+      "inputs": [
+        {
+          "name": "args",
+          "type": "bytes32[]"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
       "constant": false,
       "inputs": [
         {
@@ -29,7 +40,7 @@
         },
         {
           "name": "_scrapDate",
-          "type": "bytes32"
+          "type": "int256"
         }
       ],
       "name": "setScraps",
@@ -68,7 +79,7 @@
         },
         {
           "name": "",
-          "type": "bytes32"
+          "type": "int256"
         }
       ],
       "payable": false,
@@ -88,26 +99,45 @@
       "payable": false,
       "stateMutability": "view",
       "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "source",
+          "type": "string"
+        }
+      ],
+      "name": "stringToBytes32",
+      "outputs": [
+        {
+          "name": "result",
+          "type": "bytes32"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
     }
   ],
-  "bytecode": "0x608060405234801561001057600080fd5b50610313806100206000396000f30060806040526004361061006d576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063168f6da61461007257806388697619146100c2578063a4c20cf714610103578063c11873be14610131578063eacd0fd91461015c575b600080fd5b34801561007e57600080fd5b5061009d600480360381019080803590602001909291905050506101c8565b6040518083815260200182600019166000191681526020019250505060405180910390f35b3480156100ce57600080fd5b506100ed60048036038101908080359060200190929190505050610200565b6040518082815260200191505060405180910390f35b61012f600480360381019080803590602001909291908035600019169060200190929190505050610223565b005b34801561013d57600080fd5b50610146610282565b6040518082815260200191505060405180910390f35b34801561016857600080fd5b5061017161028f565b6040518080602001828103825283818151815260200191508051906020019060200280838360005b838110156101b4578082015181840152602081019050610199565b505050509050019250505060405180910390f35b600080600080848152602001908152602001600020600001546000808581526020019081526020016000206001015491509150915091565b60018181548110151561020f57fe5b906000526020600020016000915090505481565b600080600084815260200190815260200160002090508281600001819055508181600101816000191690555060018084908060018154018082558091505090600182039060005260206000200160009091929091909150555050505050565b6000600180549050905090565b606060018054806020026020016040519081016040528092919081815260200182805480156102dd57602002820191906000526020600020905b8154815260200190600101908083116102c9575b50505050509050905600a165627a7a7230582040bef8bc45a19b1ec9d14ad41791d581a6457bde992b87650992ff0c99a837de0029",
-  "deployedBytecode": "0x60806040526004361061006d576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063168f6da61461007257806388697619146100c2578063a4c20cf714610103578063c11873be14610131578063eacd0fd91461015c575b600080fd5b34801561007e57600080fd5b5061009d600480360381019080803590602001909291905050506101c8565b6040518083815260200182600019166000191681526020019250505060405180910390f35b3480156100ce57600080fd5b506100ed60048036038101908080359060200190929190505050610200565b6040518082815260200191505060405180910390f35b61012f600480360381019080803590602001909291908035600019169060200190929190505050610223565b005b34801561013d57600080fd5b50610146610282565b6040518082815260200191505060405180910390f35b34801561016857600080fd5b5061017161028f565b6040518080602001828103825283818151815260200191508051906020019060200280838360005b838110156101b4578082015181840152602081019050610199565b505050509050019250505060405180910390f35b600080600080848152602001908152602001600020600001546000808581526020019081526020016000206001015491509150915091565b60018181548110151561020f57fe5b906000526020600020016000915090505481565b600080600084815260200190815260200160002090508281600001819055508181600101816000191690555060018084908060018154018082558091505090600182039060005260206000200160009091929091909150555050505050565b6000600180549050905090565b606060018054806020026020016040519081016040528092919081815260200182805480156102dd57602002820191906000526020600020905b8154815260200190600101908083116102c9575b50505050509050905600a165627a7a7230582040bef8bc45a19b1ec9d14ad41791d581a6457bde992b87650992ff0c99a837de0029",
-  "sourceMap": "25:726:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;25:726:0;;;;;;;",
-  "deployedSourceMap": "25:726:0:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;511:139;;8:9:-1;5:2;;;30:1;27;20:12;5:2;511:139:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;159:24;;8:9:-1;5:2;;;30:1;27;20:12;5:2;159:24:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;190:226;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;656:91;;8:9:-1;5:2;;;30:1;27;20:12;5:2;656:91:0;;;;;;;;;;;;;;;;;;;;;;;422:83;;8:9:-1;5:2;;;30:1;27;20:12;5:2;422:83:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;422:83:0;;;;;;;;;;;;;;;;;511:139;563:4;569:7;596:6;:14;603:6;596:14;;;;;;;;;;;:20;;;618:6;:14;625:6;618:14;;;;;;;;;;;:24;;;588:55;;;;511:139;;;:::o;159:24::-;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;190:226::-;266:19;288:6;:14;295:6;288:14;;;;;;;;;;;266:36;;327:6;313:5;:11;;:20;;;;361:10;343:5;:15;;:28;;;;;;;408:1;383:10;399:6;383:23;;39:1:-1;33:3;27:10;23:18;57:10;52:3;45:23;79:10;72:17;;0:93;383:23:0;;;;;;;;;;;;;;;;;;;;;:26;;190:226;;;:::o;656:91::-;700:4;723:10;:17;;;;716:24;;656:91;:::o;422:83::-;463:6;488:10;481:17;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;422:83;:::o",
-  "source": "pragma solidity ^0.4.18;\ncontract Scrappage {\n\n    struct Scrap {\n        uint carid;\n        bytes32 scrapDate;\n    }\n    mapping (uint => Scrap) scraps;\n    uint[] public scrapAccts;\n\n    function setScraps(uint _carid, bytes32 _scrapDate) public payable{\n        Scrap storage scrap = scraps[_carid];\n\n        scrap.carid = _carid;\n        scrap.scrapDate = _scrapDate;\n\n\n        scrapAccts.push(_carid) -1;\n    }\n\n    function getScraps() view public returns(uint[]) {\n        return scrapAccts;\n    }\n\n    function getScrap(uint _carid) view public returns (uint, bytes32) {\n        return (scraps[_carid].carid, scraps[_carid].scrapDate);\n    }\n\n    function countScraps() view public returns (uint) {\n        return scrapAccts.length;\n    }\n\n\n}\n",
+  "bytecode": "0x608060405234801561001057600080fd5b5060405161047f38038061047f833981018060405281019080805182019291905050506100516107d762020d37610057640100000000026401000000009004565b506100b2565b6000806000848152602001908152602001600020905082816000018190555081816001018190555060018084908060018154018082558091505090600182039060005260206000200160009091929091909150555050505050565b6103be806100c16000396000f300608060405260043610610078576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063168f6da61461007d57806345fb7d07146100c557806388697619146100ef578063c11873be14610130578063cfb519281461015b578063eacd0fd9146101e0575b600080fd5b34801561008957600080fd5b506100a86004803603810190808035906020019092919050505061024c565b604051808381526020018281526020019250505060405180910390f35b6100ed6004803603810190808035906020019092919080359060200190929190505050610284565b005b3480156100fb57600080fd5b5061011a600480360381019080803590602001909291905050506102df565b6040518082815260200191505060405180910390f35b34801561013c57600080fd5b50610145610302565b6040518082815260200191505060405180910390f35b34801561016757600080fd5b506101c2600480360381019080803590602001908201803590602001908080601f016020809104026020016040519081016040528093929190818152602001838380828437820191505050505050919291929050505061030f565b60405180826000191660001916815260200191505060405180910390f35b3480156101ec57600080fd5b506101f561033a565b6040518080602001828103825283818151815260200191508051906020019060200280838360005b8381101561023857808201518184015260208101905061021d565b505050509050019250505060405180910390f35b600080600080848152602001908152602001600020600001546000808581526020019081526020016000206001015491509150915091565b6000806000848152602001908152602001600020905082816000018190555081816001018190555060018084908060018154018082558091505090600182039060005260206000200160009091929091909150555050505050565b6001818154811015156102ee57fe5b906000526020600020016000915090505481565b6000600180549050905090565b6000606082905060008151141561032c5760006001029150610334565b602083015191505b50919050565b6060600180548060200260200160405190810160405280929190818152602001828054801561038857602002820191906000526020600020905b815481526020019060010190808311610374575b50505050509050905600a165627a7a72305820048ddf2e1d2a9bce1fbd535129c260016cd05ef5b09c37dcaac5cc39fb69599b0029",
+  "deployedBytecode": "0x608060405260043610610078576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063168f6da61461007d57806345fb7d07146100c557806388697619146100ef578063c11873be14610130578063cfb519281461015b578063eacd0fd9146101e0575b600080fd5b34801561008957600080fd5b506100a86004803603810190808035906020019092919050505061024c565b604051808381526020018281526020019250505060405180910390f35b6100ed6004803603810190808035906020019092919080359060200190929190505050610284565b005b3480156100fb57600080fd5b5061011a600480360381019080803590602001909291905050506102df565b6040518082815260200191505060405180910390f35b34801561013c57600080fd5b50610145610302565b6040518082815260200191505060405180910390f35b34801561016757600080fd5b506101c2600480360381019080803590602001908201803590602001908080601f016020809104026020016040519081016040528093929190818152602001838380828437820191505050505050919291929050505061030f565b60405180826000191660001916815260200191505060405180910390f35b3480156101ec57600080fd5b506101f561033a565b6040518080602001828103825283818151815260200191508051906020019060200280838360005b8381101561023857808201518184015260208101905061021d565b505050509050019250505060405180910390f35b600080600080848152602001908152602001600020600001546000808581526020019081526020016000206001015491509150915091565b6000806000848152602001908152602001600020905082816000018190555081816001018190555060018084908060018154018082558091505090600182039060005260206000200160009091929091909150555050505050565b6001818154811015156102ee57fe5b906000526020600020016000915090505481565b6000600180549050905090565b6000606082905060008151141561032c5760006001029150610334565b602083015191505b50919050565b6060600180548060200260200160405190810160405280929190818152602001828054801561038857602002820191906000526020600020905b815481526020019060010190808311610374575b50505050509050905600a165627a7a72305820048ddf2e1d2a9bce1fbd535129c260016cd05ef5b09c37dcaac5cc39fb69599b0029",
+  "sourceMap": "25:1079:3:-;;;186:74;8:9:-1;5:2;;;30:1;27;20:12;5:2;186:74:3;;;;;;;;;;;;;;;;;;;;;;;;;;;;;229:23;239:4;245:6;229:9;;;:23;;;:::i;:::-;186:74;25:1079;;266:222;338:19;360:6;:14;367:6;360:14;;;;;;;;;;;338:36;;399:6;385:5;:11;;:20;;;;433:10;415:5;:15;;:28;;;;480:1;455:10;471:6;455:23;;39:1:-1;33:3;27:10;23:18;57:10;52:3;45:23;79:10;72:17;;0:93;455:23:3;;;;;;;;;;;;;;;;;;;;;:26;;266:222;;;:::o;25:1079::-;;;;;;;",
+  "deployedSourceMap": "25:1079:3:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;583:135;;8:9:-1;5:2;;;30:1;27;20:12;5:2;583:135:3;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;266:222;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;155:24;;8:9:-1;5:2;;;30:1;27;20:12;5:2;155:24:3;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;724:91;;8:9:-1;5:2;;;30:1;27;20:12;5:2;724:91:3;;;;;;;;;;;;;;;;;;;;;;;821:279;;8:9:-1;5:2;;;30:1;27;20:12;5:2;821:279:3;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;494:83;;8:9:-1;5:2;;;30:1;27;20:12;5:2;494:83:3;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;494:83:3;;;;;;;;;;;;;;;;;583:135;635:4;641:3;664:6;:14;671:6;664:14;;;;;;;;;;;:20;;;686:6;:14;693:6;686:14;;;;;;;;;;;:24;;;656:55;;;;583:135;;;:::o;266:222::-;338:19;360:6;:14;367:6;360:14;;;;;;;;;;;338:36;;399:6;385:5;:11;;:20;;;;433:10;415:5;:15;;:28;;;;480:1;455:10;471:6;455:23;;39:1:-1;33:3;27:10;23:18;57:10;52:3;45:23;79:10;72:17;;0:93;455:23:3;;;;;;;;;;;;;;;;;;;;;:26;;266:222;;;:::o;155:24::-;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;724:91::-;768:4;791:10;:17;;;;784:24;;724:91;:::o;821:279::-;877:14;901:32;942:6;901:48;;991:1;961:19;:26;:31;957:68;;;1013:3;1006:10;;;;;;957:68;1082:2;1074:6;1070:15;1064:22;1054:32;;1042:52;;;;;:::o;494:83::-;535:6;560:10;553:17;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;494:83;:::o",
+  "source": "pragma solidity ^0.4.18;\ncontract Scrappage {\n\n    struct Scrap {\n        uint carid;\n        int scrapDate;\n    }\n    mapping (uint => Scrap) scraps;\n    uint[] public scrapAccts;\n\n    constructor(bytes32[] args) public {\n      setScraps(2007, 134455) ;\n    }\n\n    function setScraps(uint _carid, int _scrapDate) public payable{\n        Scrap storage scrap = scraps[_carid];\n\n        scrap.carid = _carid;\n        scrap.scrapDate = _scrapDate;\n\n\n        scrapAccts.push(_carid) -1;\n    }\n\n    function getScraps() view public returns(uint[]) {\n        return scrapAccts;\n    }\n\n    function getScrap(uint _carid) view public returns (uint, int) {\n        return (scraps[_carid].carid, scraps[_carid].scrapDate);\n    }\n\n    function countScraps() view public returns (uint) {\n        return scrapAccts.length;\n    }\n\n    function stringToBytes32(string memory source) returns (bytes32 result) {\n      bytes memory tempEmptyStringTest = bytes(source);\n      if (tempEmptyStringTest.length == 0) {\n          return 0x0;\n      }\n\n      assembly {\n          result := mload(add(source, 32))\n      }\n    }\n\n\n}\n",
   "sourcePath": "/Users/johnsgeorge/Desktop/CarApplication/CarBackEnd/contracts/Scrappage.sol",
   "ast": {
     "absolutePath": "/Users/johnsgeorge/Desktop/CarApplication/CarBackEnd/contracts/Scrappage.sol",
     "exportedSymbols": {
       "Scrappage": [
-        86
+        1251
       ]
     },
-    "id": 87,
+    "id": 1252,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 1,
+        "id": 1131,
         "literals": [
           "solidity",
           "^",
@@ -115,7 +145,7 @@
           ".18"
         ],
         "nodeType": "PragmaDirective",
-        "src": "0:24:0"
+        "src": "0:24:3"
       },
       {
         "baseContracts": [],
@@ -123,24 +153,24 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 86,
+        "id": 1251,
         "linearizedBaseContracts": [
-          86
+          1251
         ],
         "name": "Scrappage",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "canonicalName": "Scrappage.Scrap",
-            "id": 6,
+            "id": 1136,
             "members": [
               {
                 "constant": false,
-                "id": 3,
+                "id": 1133,
                 "name": "carid",
                 "nodeType": "VariableDeclaration",
-                "scope": 6,
-                "src": "74:10:0",
+                "scope": 1136,
+                "src": "74:10:3",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -148,10 +178,10 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 2,
+                  "id": 1132,
                   "name": "uint",
                   "nodeType": "ElementaryTypeName",
-                  "src": "74:4:0",
+                  "src": "74:4:3",
                   "typeDescriptions": {
                     "typeIdentifier": "t_uint256",
                     "typeString": "uint256"
@@ -162,25 +192,25 @@
               },
               {
                 "constant": false,
-                "id": 5,
+                "id": 1135,
                 "name": "scrapDate",
                 "nodeType": "VariableDeclaration",
-                "scope": 6,
-                "src": "94:17:0",
+                "scope": 1136,
+                "src": "94:13:3",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_bytes32",
-                  "typeString": "bytes32"
+                  "typeIdentifier": "t_int256",
+                  "typeString": "int256"
                 },
                 "typeName": {
-                  "id": 4,
-                  "name": "bytes32",
+                  "id": 1134,
+                  "name": "int",
                   "nodeType": "ElementaryTypeName",
-                  "src": "94:7:0",
+                  "src": "94:3:3",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_bytes32",
-                    "typeString": "bytes32"
+                    "typeIdentifier": "t_int256",
+                    "typeString": "int256"
                   }
                 },
                 "value": null,
@@ -189,50 +219,50 @@
             ],
             "name": "Scrap",
             "nodeType": "StructDefinition",
-            "scope": 86,
-            "src": "51:67:0",
+            "scope": 1251,
+            "src": "51:63:3",
             "visibility": "public"
           },
           {
             "constant": false,
-            "id": 10,
+            "id": 1140,
             "name": "scraps",
             "nodeType": "VariableDeclaration",
-            "scope": 86,
-            "src": "123:30:0",
+            "scope": 1251,
+            "src": "119:30:3",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Scrap_$6_storage_$",
+              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Scrap_$1136_storage_$",
               "typeString": "mapping(uint256 => struct Scrappage.Scrap)"
             },
             "typeName": {
-              "id": 9,
+              "id": 1139,
               "keyType": {
-                "id": 7,
+                "id": 1137,
                 "name": "uint",
                 "nodeType": "ElementaryTypeName",
-                "src": "132:4:0",
+                "src": "128:4:3",
                 "typeDescriptions": {
                   "typeIdentifier": "t_uint256",
                   "typeString": "uint256"
                 }
               },
               "nodeType": "Mapping",
-              "src": "123:23:0",
+              "src": "119:23:3",
               "typeDescriptions": {
-                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Scrap_$6_storage_$",
+                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Scrap_$1136_storage_$",
                 "typeString": "mapping(uint256 => struct Scrappage.Scrap)"
               },
               "valueType": {
                 "contractScope": null,
-                "id": 8,
+                "id": 1138,
                 "name": "Scrap",
                 "nodeType": "UserDefinedTypeName",
-                "referencedDeclaration": 6,
-                "src": "140:5:0",
+                "referencedDeclaration": 1136,
+                "src": "136:5:3",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_struct$_Scrap_$6_storage_ptr",
+                  "typeIdentifier": "t_struct$_Scrap_$1136_storage_ptr",
                   "typeString": "struct Scrappage.Scrap"
                 }
               }
@@ -242,11 +272,11 @@
           },
           {
             "constant": false,
-            "id": 13,
+            "id": 1143,
             "name": "scrapAccts",
             "nodeType": "VariableDeclaration",
-            "scope": 86,
-            "src": "159:24:0",
+            "scope": 1251,
+            "src": "155:24:3",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -255,19 +285,19 @@
             },
             "typeName": {
               "baseType": {
-                "id": 11,
+                "id": 1141,
                 "name": "uint",
                 "nodeType": "ElementaryTypeName",
-                "src": "159:4:0",
+                "src": "155:4:3",
                 "typeDescriptions": {
                   "typeIdentifier": "t_uint256",
                   "typeString": "uint256"
                 }
               },
-              "id": 12,
+              "id": 1142,
               "length": null,
               "nodeType": "ArrayTypeName",
-              "src": "159:6:0",
+              "src": "155:6:3",
               "typeDescriptions": {
                 "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
                 "typeString": "uint256[]"
@@ -278,37 +308,190 @@
           },
           {
             "body": {
-              "id": 46,
+              "id": 1154,
               "nodeType": "Block",
-              "src": "256:160:0",
+              "src": "221:39:3",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "32303037",
+                        "id": 1150,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "number",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "239:4:3",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_rational_2007_by_1",
+                          "typeString": "int_const 2007"
+                        },
+                        "value": "2007"
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "313334343535",
+                        "id": 1151,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "number",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "245:6:3",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_rational_134455_by_1",
+                          "typeString": "int_const 134455"
+                        },
+                        "value": "134455"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_rational_2007_by_1",
+                          "typeString": "int_const 2007"
+                        },
+                        {
+                          "typeIdentifier": "t_rational_134455_by_1",
+                          "typeString": "int_const 134455"
+                        }
+                      ],
+                      "id": 1149,
+                      "name": "setScraps",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1189,
+                      "src": "229:9:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_uint256_$_t_int256_$returns$__$",
+                        "typeString": "function (uint256,int256)"
+                      }
+                    },
+                    "id": 1152,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "229:23:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 1153,
+                  "nodeType": "ExpressionStatement",
+                  "src": "229:23:3"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1155,
+            "implemented": true,
+            "isConstructor": true,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1147,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1146,
+                  "name": "args",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1155,
+                  "src": "198:14:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_bytes32_$dyn_memory_ptr",
+                    "typeString": "bytes32[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 1144,
+                      "name": "bytes32",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "198:7:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes32",
+                        "typeString": "bytes32"
+                      }
+                    },
+                    "id": 1145,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "198:9:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_bytes32_$dyn_storage_ptr",
+                      "typeString": "bytes32[]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "197:16:3"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 1148,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "221:0:3"
+            },
+            "scope": 1251,
+            "src": "186:74:3",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 1188,
+              "nodeType": "Block",
+              "src": "328:160:3",
               "statements": [
                 {
                   "assignments": [
-                    21
+                    1163
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 21,
+                      "id": 1163,
                       "name": "scrap",
                       "nodeType": "VariableDeclaration",
-                      "scope": 47,
-                      "src": "266:19:0",
+                      "scope": 1189,
+                      "src": "338:19:3",
                       "stateVariable": false,
                       "storageLocation": "storage",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_Scrap_$6_storage_ptr",
+                        "typeIdentifier": "t_struct$_Scrap_$1136_storage_ptr",
                         "typeString": "struct Scrappage.Scrap"
                       },
                       "typeName": {
                         "contractScope": null,
-                        "id": 20,
+                        "id": 1162,
                         "name": "Scrap",
                         "nodeType": "UserDefinedTypeName",
-                        "referencedDeclaration": 6,
-                        "src": "266:5:0",
+                        "referencedDeclaration": 1136,
+                        "src": "338:5:3",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Scrap_$6_storage_ptr",
+                          "typeIdentifier": "t_struct$_Scrap_$1136_storage_ptr",
                           "typeString": "struct Scrappage.Scrap"
                         }
                       },
@@ -316,31 +499,31 @@
                       "visibility": "internal"
                     }
                   ],
-                  "id": 25,
+                  "id": 1167,
                   "initialValue": {
                     "argumentTypes": null,
                     "baseExpression": {
                       "argumentTypes": null,
-                      "id": 22,
+                      "id": 1164,
                       "name": "scraps",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 10,
-                      "src": "288:6:0",
+                      "referencedDeclaration": 1140,
+                      "src": "360:6:3",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Scrap_$6_storage_$",
+                        "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Scrap_$1136_storage_$",
                         "typeString": "mapping(uint256 => struct Scrappage.Scrap storage ref)"
                       }
                     },
-                    "id": 24,
+                    "id": 1166,
                     "indexExpression": {
                       "argumentTypes": null,
-                      "id": 23,
+                      "id": 1165,
                       "name": "_carid",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 15,
-                      "src": "295:6:0",
+                      "referencedDeclaration": 1157,
+                      "src": "367:6:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
@@ -351,19 +534,19 @@
                     "isPure": false,
                     "lValueRequested": false,
                     "nodeType": "IndexAccess",
-                    "src": "288:14:0",
+                    "src": "360:14:3",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_Scrap_$6_storage",
+                      "typeIdentifier": "t_struct$_Scrap_$1136_storage",
                       "typeString": "struct Scrappage.Scrap storage ref"
                     }
                   },
                   "nodeType": "VariableDeclarationStatement",
-                  "src": "266:36:0"
+                  "src": "338:36:3"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 30,
+                    "id": 1172,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -372,26 +555,26 @@
                       "argumentTypes": null,
                       "expression": {
                         "argumentTypes": null,
-                        "id": 26,
+                        "id": 1168,
                         "name": "scrap",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 21,
-                        "src": "313:5:0",
+                        "referencedDeclaration": 1163,
+                        "src": "385:5:3",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Scrap_$6_storage_ptr",
+                          "typeIdentifier": "t_struct$_Scrap_$1136_storage_ptr",
                           "typeString": "struct Scrappage.Scrap storage pointer"
                         }
                       },
-                      "id": 28,
+                      "id": 1170,
                       "isConstant": false,
                       "isLValue": true,
                       "isPure": false,
                       "lValueRequested": true,
                       "memberName": "carid",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 3,
-                      "src": "313:11:0",
+                      "referencedDeclaration": 1133,
+                      "src": "385:11:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
@@ -401,31 +584,31 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 29,
+                      "id": 1171,
                       "name": "_carid",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 15,
-                      "src": "327:6:0",
+                      "referencedDeclaration": 1157,
+                      "src": "399:6:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
                       }
                     },
-                    "src": "313:20:0",
+                    "src": "385:20:3",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     }
                   },
-                  "id": 31,
+                  "id": 1173,
                   "nodeType": "ExpressionStatement",
-                  "src": "313:20:0"
+                  "src": "385:20:3"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 36,
+                    "id": 1178,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -434,55 +617,55 @@
                       "argumentTypes": null,
                       "expression": {
                         "argumentTypes": null,
-                        "id": 32,
+                        "id": 1174,
                         "name": "scrap",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 21,
-                        "src": "343:5:0",
+                        "referencedDeclaration": 1163,
+                        "src": "415:5:3",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Scrap_$6_storage_ptr",
+                          "typeIdentifier": "t_struct$_Scrap_$1136_storage_ptr",
                           "typeString": "struct Scrappage.Scrap storage pointer"
                         }
                       },
-                      "id": 34,
+                      "id": 1176,
                       "isConstant": false,
                       "isLValue": true,
                       "isPure": false,
                       "lValueRequested": true,
                       "memberName": "scrapDate",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 5,
-                      "src": "343:15:0",
+                      "referencedDeclaration": 1135,
+                      "src": "415:15:3",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_bytes32",
-                        "typeString": "bytes32"
+                        "typeIdentifier": "t_int256",
+                        "typeString": "int256"
                       }
                     },
                     "nodeType": "Assignment",
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 35,
+                      "id": 1177,
                       "name": "_scrapDate",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 17,
-                      "src": "361:10:0",
+                      "referencedDeclaration": 1159,
+                      "src": "433:10:3",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_bytes32",
-                        "typeString": "bytes32"
+                        "typeIdentifier": "t_int256",
+                        "typeString": "int256"
                       }
                     },
-                    "src": "343:28:0",
+                    "src": "415:28:3",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_bytes32",
-                      "typeString": "bytes32"
+                      "typeIdentifier": "t_int256",
+                      "typeString": "int256"
                     }
                   },
-                  "id": 37,
+                  "id": 1179,
                   "nodeType": "ExpressionStatement",
-                  "src": "343:28:0"
+                  "src": "415:28:3"
                 },
                 {
                   "expression": {
@@ -491,7 +674,7 @@
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     },
-                    "id": 44,
+                    "id": 1186,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -501,12 +684,12 @@
                       "arguments": [
                         {
                           "argumentTypes": null,
-                          "id": 41,
+                          "id": 1183,
                           "name": "_carid",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 15,
-                          "src": "399:6:0",
+                          "referencedDeclaration": 1157,
+                          "src": "471:6:3",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
                             "typeString": "uint256"
@@ -522,18 +705,18 @@
                         ],
                         "expression": {
                           "argumentTypes": null,
-                          "id": 38,
+                          "id": 1180,
                           "name": "scrapAccts",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 13,
-                          "src": "383:10:0",
+                          "referencedDeclaration": 1143,
+                          "src": "455:10:3",
                           "typeDescriptions": {
                             "typeIdentifier": "t_array$_t_uint256_$dyn_storage",
                             "typeString": "uint256[] storage ref"
                           }
                         },
-                        "id": 40,
+                        "id": 1182,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -541,13 +724,13 @@
                         "memberName": "push",
                         "nodeType": "MemberAccess",
                         "referencedDeclaration": null,
-                        "src": "383:15:0",
+                        "src": "455:15:3",
                         "typeDescriptions": {
                           "typeIdentifier": "t_function_arraypush_nonpayable$_t_uint256_$returns$_t_uint256_$",
                           "typeString": "function (uint256) returns (uint256)"
                         }
                       },
-                      "id": 42,
+                      "id": 1184,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -555,7 +738,7 @@
                       "lValueRequested": false,
                       "names": [],
                       "nodeType": "FunctionCall",
-                      "src": "383:23:0",
+                      "src": "455:23:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
@@ -566,14 +749,14 @@
                     "rightExpression": {
                       "argumentTypes": null,
                       "hexValue": "31",
-                      "id": 43,
+                      "id": 1185,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
                       "kind": "number",
                       "lValueRequested": false,
                       "nodeType": "Literal",
-                      "src": "408:1:0",
+                      "src": "480:1:3",
                       "subdenomination": null,
                       "typeDescriptions": {
                         "typeIdentifier": "t_rational_1_by_1",
@@ -581,20 +764,20 @@
                       },
                       "value": "1"
                     },
-                    "src": "383:26:0",
+                    "src": "455:26:3",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     }
                   },
-                  "id": 45,
+                  "id": 1187,
                   "nodeType": "ExpressionStatement",
-                  "src": "383:26:0"
+                  "src": "455:26:3"
                 }
               ]
             },
             "documentation": null,
-            "id": 47,
+            "id": 1189,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -602,16 +785,16 @@
             "name": "setScraps",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 18,
+              "id": 1160,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 15,
+                  "id": 1157,
                   "name": "_carid",
                   "nodeType": "VariableDeclaration",
-                  "scope": 47,
-                  "src": "209:11:0",
+                  "scope": 1189,
+                  "src": "285:11:3",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -619,10 +802,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 14,
+                    "id": 1156,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
-                    "src": "209:4:0",
+                    "src": "285:4:3",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -633,75 +816,75 @@
                 },
                 {
                   "constant": false,
-                  "id": 17,
+                  "id": 1159,
                   "name": "_scrapDate",
                   "nodeType": "VariableDeclaration",
-                  "scope": 47,
-                  "src": "222:18:0",
+                  "scope": 1189,
+                  "src": "298:14:3",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_bytes32",
-                    "typeString": "bytes32"
+                    "typeIdentifier": "t_int256",
+                    "typeString": "int256"
                   },
                   "typeName": {
-                    "id": 16,
-                    "name": "bytes32",
+                    "id": 1158,
+                    "name": "int",
                     "nodeType": "ElementaryTypeName",
-                    "src": "222:7:0",
+                    "src": "298:3:3",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_bytes32",
-                      "typeString": "bytes32"
+                      "typeIdentifier": "t_int256",
+                      "typeString": "int256"
                     }
                   },
                   "value": null,
                   "visibility": "internal"
                 }
               ],
-              "src": "208:33:0"
+              "src": "284:29:3"
             },
             "payable": true,
             "returnParameters": {
-              "id": 19,
+              "id": 1161,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "256:0:0"
+              "src": "328:0:3"
             },
-            "scope": 86,
-            "src": "190:226:0",
+            "scope": 1251,
+            "src": "266:222:3",
             "stateMutability": "payable",
             "superFunction": null,
             "visibility": "public"
           },
           {
             "body": {
-              "id": 55,
+              "id": 1197,
               "nodeType": "Block",
-              "src": "471:34:0",
+              "src": "543:34:3",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 53,
+                    "id": 1195,
                     "name": "scrapAccts",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 13,
-                    "src": "488:10:0",
+                    "referencedDeclaration": 1143,
+                    "src": "560:10:3",
                     "typeDescriptions": {
                       "typeIdentifier": "t_array$_t_uint256_$dyn_storage",
                       "typeString": "uint256[] storage ref"
                     }
                   },
-                  "functionReturnParameters": 52,
-                  "id": 54,
+                  "functionReturnParameters": 1194,
+                  "id": 1196,
                   "nodeType": "Return",
-                  "src": "481:17:0"
+                  "src": "553:17:3"
                 }
               ]
             },
             "documentation": null,
-            "id": 56,
+            "id": 1198,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": true,
@@ -709,23 +892,23 @@
             "name": "getScraps",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 48,
+              "id": 1190,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "440:2:0"
+              "src": "512:2:3"
             },
             "payable": false,
             "returnParameters": {
-              "id": 52,
+              "id": 1194,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 51,
+                  "id": 1193,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 56,
-                  "src": "463:6:0",
+                  "scope": 1198,
+                  "src": "535:6:3",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -734,19 +917,19 @@
                   },
                   "typeName": {
                     "baseType": {
-                      "id": 49,
+                      "id": 1191,
                       "name": "uint",
                       "nodeType": "ElementaryTypeName",
-                      "src": "463:4:0",
+                      "src": "535:4:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
                       }
                     },
-                    "id": 50,
+                    "id": 1192,
                     "length": null,
                     "nodeType": "ArrayTypeName",
-                    "src": "463:6:0",
+                    "src": "535:6:3",
                     "typeDescriptions": {
                       "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
                       "typeString": "uint256[]"
@@ -756,19 +939,19 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "462:8:0"
+              "src": "534:8:3"
             },
-            "scope": 86,
-            "src": "422:83:0",
+            "scope": 1251,
+            "src": "494:83:3",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "public"
           },
           {
             "body": {
-              "id": 75,
+              "id": 1217,
               "nodeType": "Block",
-              "src": "578:72:0",
+              "src": "646:72:3",
               "statements": [
                 {
                   "expression": {
@@ -780,26 +963,26 @@
                           "argumentTypes": null,
                           "baseExpression": {
                             "argumentTypes": null,
-                            "id": 65,
+                            "id": 1207,
                             "name": "scraps",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 10,
-                            "src": "596:6:0",
+                            "referencedDeclaration": 1140,
+                            "src": "664:6:3",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Scrap_$6_storage_$",
+                              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Scrap_$1136_storage_$",
                               "typeString": "mapping(uint256 => struct Scrappage.Scrap storage ref)"
                             }
                           },
-                          "id": 67,
+                          "id": 1209,
                           "indexExpression": {
                             "argumentTypes": null,
-                            "id": 66,
+                            "id": 1208,
                             "name": "_carid",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 58,
-                            "src": "603:6:0",
+                            "referencedDeclaration": 1200,
+                            "src": "671:6:3",
                             "typeDescriptions": {
                               "typeIdentifier": "t_uint256",
                               "typeString": "uint256"
@@ -810,21 +993,21 @@
                           "isPure": false,
                           "lValueRequested": false,
                           "nodeType": "IndexAccess",
-                          "src": "596:14:0",
+                          "src": "664:14:3",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_Scrap_$6_storage",
+                            "typeIdentifier": "t_struct$_Scrap_$1136_storage",
                             "typeString": "struct Scrappage.Scrap storage ref"
                           }
                         },
-                        "id": 68,
+                        "id": 1210,
                         "isConstant": false,
                         "isLValue": true,
                         "isPure": false,
                         "lValueRequested": false,
                         "memberName": "carid",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 3,
-                        "src": "596:20:0",
+                        "referencedDeclaration": 1133,
+                        "src": "664:20:3",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
@@ -836,26 +1019,26 @@
                           "argumentTypes": null,
                           "baseExpression": {
                             "argumentTypes": null,
-                            "id": 69,
+                            "id": 1211,
                             "name": "scraps",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 10,
-                            "src": "618:6:0",
+                            "referencedDeclaration": 1140,
+                            "src": "686:6:3",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Scrap_$6_storage_$",
+                              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Scrap_$1136_storage_$",
                               "typeString": "mapping(uint256 => struct Scrappage.Scrap storage ref)"
                             }
                           },
-                          "id": 71,
+                          "id": 1213,
                           "indexExpression": {
                             "argumentTypes": null,
-                            "id": 70,
+                            "id": 1212,
                             "name": "_carid",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 58,
-                            "src": "625:6:0",
+                            "referencedDeclaration": 1200,
+                            "src": "693:6:3",
                             "typeDescriptions": {
                               "typeIdentifier": "t_uint256",
                               "typeString": "uint256"
@@ -866,49 +1049,49 @@
                           "isPure": false,
                           "lValueRequested": false,
                           "nodeType": "IndexAccess",
-                          "src": "618:14:0",
+                          "src": "686:14:3",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_Scrap_$6_storage",
+                            "typeIdentifier": "t_struct$_Scrap_$1136_storage",
                             "typeString": "struct Scrappage.Scrap storage ref"
                           }
                         },
-                        "id": 72,
+                        "id": 1214,
                         "isConstant": false,
                         "isLValue": true,
                         "isPure": false,
                         "lValueRequested": false,
                         "memberName": "scrapDate",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 5,
-                        "src": "618:24:0",
+                        "referencedDeclaration": 1135,
+                        "src": "686:24:3",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_bytes32",
-                          "typeString": "bytes32"
+                          "typeIdentifier": "t_int256",
+                          "typeString": "int256"
                         }
                       }
                     ],
-                    "id": 73,
+                    "id": 1215,
                     "isConstant": false,
                     "isInlineArray": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "nodeType": "TupleExpression",
-                    "src": "595:48:0",
+                    "src": "663:48:3",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_tuple$_t_uint256_$_t_bytes32_$",
-                      "typeString": "tuple(uint256,bytes32)"
+                      "typeIdentifier": "t_tuple$_t_uint256_$_t_int256_$",
+                      "typeString": "tuple(uint256,int256)"
                     }
                   },
-                  "functionReturnParameters": 64,
-                  "id": 74,
+                  "functionReturnParameters": 1206,
+                  "id": 1216,
                   "nodeType": "Return",
-                  "src": "588:55:0"
+                  "src": "656:55:3"
                 }
               ]
             },
             "documentation": null,
-            "id": 76,
+            "id": 1218,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": true,
@@ -916,16 +1099,16 @@
             "name": "getScrap",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 59,
+              "id": 1201,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 58,
+                  "id": 1200,
                   "name": "_carid",
                   "nodeType": "VariableDeclaration",
-                  "scope": 76,
-                  "src": "529:11:0",
+                  "scope": 1218,
+                  "src": "601:11:3",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -933,10 +1116,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 57,
+                    "id": 1199,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
-                    "src": "529:4:0",
+                    "src": "601:4:3",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -946,20 +1129,20 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "528:13:0"
+              "src": "600:13:3"
             },
             "payable": false,
             "returnParameters": {
-              "id": 64,
+              "id": 1206,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 61,
+                  "id": 1203,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 76,
-                  "src": "563:4:0",
+                  "scope": 1218,
+                  "src": "635:4:3",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -967,10 +1150,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 60,
+                    "id": 1202,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
-                    "src": "563:4:0",
+                    "src": "635:4:3",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -981,11 +1164,413 @@
                 },
                 {
                   "constant": false,
-                  "id": 63,
+                  "id": 1205,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 76,
-                  "src": "569:7:0",
+                  "scope": 1218,
+                  "src": "641:3:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_int256",
+                    "typeString": "int256"
+                  },
+                  "typeName": {
+                    "id": 1204,
+                    "name": "int",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "641:3:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_int256",
+                      "typeString": "int256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "634:11:3"
+            },
+            "scope": 1251,
+            "src": "583:135:3",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 1226,
+              "nodeType": "Block",
+              "src": "774:41:3",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "expression": {
+                      "argumentTypes": null,
+                      "id": 1223,
+                      "name": "scrapAccts",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1143,
+                      "src": "791:10:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_array$_t_uint256_$dyn_storage",
+                        "typeString": "uint256[] storage ref"
+                      }
+                    },
+                    "id": 1224,
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "memberName": "length",
+                    "nodeType": "MemberAccess",
+                    "referencedDeclaration": null,
+                    "src": "791:17:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 1222,
+                  "id": 1225,
+                  "nodeType": "Return",
+                  "src": "784:24:3"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1227,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "countScraps",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1219,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "744:2:3"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 1222,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1221,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1227,
+                  "src": "768:4:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1220,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "768:4:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "767:6:3"
+            },
+            "scope": 1251,
+            "src": "724:91:3",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 1249,
+              "nodeType": "Block",
+              "src": "893:207:3",
+              "statements": [
+                {
+                  "assignments": [
+                    1235
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 1235,
+                      "name": "tempEmptyStringTest",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 1250,
+                      "src": "901:32:3",
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes_memory_ptr",
+                        "typeString": "bytes"
+                      },
+                      "typeName": {
+                        "id": 1234,
+                        "name": "bytes",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "901:5:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes_storage_ptr",
+                          "typeString": "bytes"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 1239,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 1237,
+                        "name": "source",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1229,
+                        "src": "942:6:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      ],
+                      "id": 1236,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "nodeType": "ElementaryTypeNameExpression",
+                      "src": "936:5:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_type$_t_bytes_storage_ptr_$",
+                        "typeString": "type(bytes storage pointer)"
+                      },
+                      "typeName": "bytes"
+                    },
+                    "id": 1238,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "typeConversion",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "936:13:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_memory",
+                      "typeString": "bytes memory"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "901:48:3"
+                },
+                {
+                  "condition": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    },
+                    "id": 1243,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 1240,
+                        "name": "tempEmptyStringTest",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1235,
+                        "src": "961:19:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes_memory_ptr",
+                          "typeString": "bytes memory"
+                        }
+                      },
+                      "id": 1241,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "length",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "961:26:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "==",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "hexValue": "30",
+                      "id": 1242,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "991:1:3",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_0_by_1",
+                        "typeString": "int_const 0"
+                      },
+                      "value": "0"
+                    },
+                    "src": "961:31:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "falseBody": null,
+                  "id": 1247,
+                  "nodeType": "IfStatement",
+                  "src": "957:68:3",
+                  "trueBody": {
+                    "id": 1246,
+                    "nodeType": "Block",
+                    "src": "994:31:3",
+                    "statements": [
+                      {
+                        "expression": {
+                          "argumentTypes": null,
+                          "hexValue": "307830",
+                          "id": 1244,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "number",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "1013:3:3",
+                          "subdenomination": null,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_rational_0_by_1",
+                            "typeString": "int_const 0"
+                          },
+                          "value": "0x0"
+                        },
+                        "functionReturnParameters": 1233,
+                        "id": 1245,
+                        "nodeType": "Return",
+                        "src": "1006:10:3"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "externalReferences": [
+                    {
+                      "result": {
+                        "declaration": 1232,
+                        "isOffset": false,
+                        "isSlot": false,
+                        "src": "1054:6:3",
+                        "valueSize": 1
+                      }
+                    },
+                    {
+                      "source": {
+                        "declaration": 1229,
+                        "isOffset": false,
+                        "isSlot": false,
+                        "src": "1074:6:3",
+                        "valueSize": 1
+                      }
+                    }
+                  ],
+                  "id": 1248,
+                  "nodeType": "InlineAssembly",
+                  "operations": "{\n    result := mload(add(source, 32))\n}",
+                  "src": "1033:67:3"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1250,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "stringToBytes32",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1230,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1229,
+                  "name": "source",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1250,
+                  "src": "846:20:3",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 1228,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "846:6:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "845:22:3"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 1233,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1232,
+                  "name": "result",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1250,
+                  "src": "877:14:3",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -993,10 +1578,10 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 62,
+                    "id": 1231,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
-                    "src": "569:7:0",
+                    "src": "877:7:3",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes32",
                       "typeString": "bytes32"
@@ -1006,130 +1591,33 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "562:15:0"
+              "src": "876:16:3"
             },
-            "scope": 86,
-            "src": "511:139:0",
-            "stateMutability": "view",
-            "superFunction": null,
-            "visibility": "public"
-          },
-          {
-            "body": {
-              "id": 84,
-              "nodeType": "Block",
-              "src": "706:41:0",
-              "statements": [
-                {
-                  "expression": {
-                    "argumentTypes": null,
-                    "expression": {
-                      "argumentTypes": null,
-                      "id": 81,
-                      "name": "scrapAccts",
-                      "nodeType": "Identifier",
-                      "overloadedDeclarations": [],
-                      "referencedDeclaration": 13,
-                      "src": "723:10:0",
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_array$_t_uint256_$dyn_storage",
-                        "typeString": "uint256[] storage ref"
-                      }
-                    },
-                    "id": 82,
-                    "isConstant": false,
-                    "isLValue": true,
-                    "isPure": false,
-                    "lValueRequested": false,
-                    "memberName": "length",
-                    "nodeType": "MemberAccess",
-                    "referencedDeclaration": null,
-                    "src": "723:17:0",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_uint256",
-                      "typeString": "uint256"
-                    }
-                  },
-                  "functionReturnParameters": 80,
-                  "id": 83,
-                  "nodeType": "Return",
-                  "src": "716:24:0"
-                }
-              ]
-            },
-            "documentation": null,
-            "id": 85,
-            "implemented": true,
-            "isConstructor": false,
-            "isDeclaredConst": true,
-            "modifiers": [],
-            "name": "countScraps",
-            "nodeType": "FunctionDefinition",
-            "parameters": {
-              "id": 77,
-              "nodeType": "ParameterList",
-              "parameters": [],
-              "src": "676:2:0"
-            },
-            "payable": false,
-            "returnParameters": {
-              "id": 80,
-              "nodeType": "ParameterList",
-              "parameters": [
-                {
-                  "constant": false,
-                  "id": 79,
-                  "name": "",
-                  "nodeType": "VariableDeclaration",
-                  "scope": 85,
-                  "src": "700:4:0",
-                  "stateVariable": false,
-                  "storageLocation": "default",
-                  "typeDescriptions": {
-                    "typeIdentifier": "t_uint256",
-                    "typeString": "uint256"
-                  },
-                  "typeName": {
-                    "id": 78,
-                    "name": "uint",
-                    "nodeType": "ElementaryTypeName",
-                    "src": "700:4:0",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_uint256",
-                      "typeString": "uint256"
-                    }
-                  },
-                  "value": null,
-                  "visibility": "internal"
-                }
-              ],
-              "src": "699:6:0"
-            },
-            "scope": 86,
-            "src": "656:91:0",
-            "stateMutability": "view",
+            "scope": 1251,
+            "src": "821:279:3",
+            "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 87,
-        "src": "25:726:0"
+        "scope": 1252,
+        "src": "25:1079:3"
       }
     ],
-    "src": "0:752:0"
+    "src": "0:1105:3"
   },
   "legacyAST": {
     "absolutePath": "/Users/johnsgeorge/Desktop/CarApplication/CarBackEnd/contracts/Scrappage.sol",
     "exportedSymbols": {
       "Scrappage": [
-        86
+        1251
       ]
     },
-    "id": 87,
+    "id": 1252,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 1,
+        "id": 1131,
         "literals": [
           "solidity",
           "^",
@@ -1137,7 +1625,7 @@
           ".18"
         ],
         "nodeType": "PragmaDirective",
-        "src": "0:24:0"
+        "src": "0:24:3"
       },
       {
         "baseContracts": [],
@@ -1145,24 +1633,24 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 86,
+        "id": 1251,
         "linearizedBaseContracts": [
-          86
+          1251
         ],
         "name": "Scrappage",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "canonicalName": "Scrappage.Scrap",
-            "id": 6,
+            "id": 1136,
             "members": [
               {
                 "constant": false,
-                "id": 3,
+                "id": 1133,
                 "name": "carid",
                 "nodeType": "VariableDeclaration",
-                "scope": 6,
-                "src": "74:10:0",
+                "scope": 1136,
+                "src": "74:10:3",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -1170,10 +1658,10 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 2,
+                  "id": 1132,
                   "name": "uint",
                   "nodeType": "ElementaryTypeName",
-                  "src": "74:4:0",
+                  "src": "74:4:3",
                   "typeDescriptions": {
                     "typeIdentifier": "t_uint256",
                     "typeString": "uint256"
@@ -1184,25 +1672,25 @@
               },
               {
                 "constant": false,
-                "id": 5,
+                "id": 1135,
                 "name": "scrapDate",
                 "nodeType": "VariableDeclaration",
-                "scope": 6,
-                "src": "94:17:0",
+                "scope": 1136,
+                "src": "94:13:3",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_bytes32",
-                  "typeString": "bytes32"
+                  "typeIdentifier": "t_int256",
+                  "typeString": "int256"
                 },
                 "typeName": {
-                  "id": 4,
-                  "name": "bytes32",
+                  "id": 1134,
+                  "name": "int",
                   "nodeType": "ElementaryTypeName",
-                  "src": "94:7:0",
+                  "src": "94:3:3",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_bytes32",
-                    "typeString": "bytes32"
+                    "typeIdentifier": "t_int256",
+                    "typeString": "int256"
                   }
                 },
                 "value": null,
@@ -1211,50 +1699,50 @@
             ],
             "name": "Scrap",
             "nodeType": "StructDefinition",
-            "scope": 86,
-            "src": "51:67:0",
+            "scope": 1251,
+            "src": "51:63:3",
             "visibility": "public"
           },
           {
             "constant": false,
-            "id": 10,
+            "id": 1140,
             "name": "scraps",
             "nodeType": "VariableDeclaration",
-            "scope": 86,
-            "src": "123:30:0",
+            "scope": 1251,
+            "src": "119:30:3",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Scrap_$6_storage_$",
+              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Scrap_$1136_storage_$",
               "typeString": "mapping(uint256 => struct Scrappage.Scrap)"
             },
             "typeName": {
-              "id": 9,
+              "id": 1139,
               "keyType": {
-                "id": 7,
+                "id": 1137,
                 "name": "uint",
                 "nodeType": "ElementaryTypeName",
-                "src": "132:4:0",
+                "src": "128:4:3",
                 "typeDescriptions": {
                   "typeIdentifier": "t_uint256",
                   "typeString": "uint256"
                 }
               },
               "nodeType": "Mapping",
-              "src": "123:23:0",
+              "src": "119:23:3",
               "typeDescriptions": {
-                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Scrap_$6_storage_$",
+                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Scrap_$1136_storage_$",
                 "typeString": "mapping(uint256 => struct Scrappage.Scrap)"
               },
               "valueType": {
                 "contractScope": null,
-                "id": 8,
+                "id": 1138,
                 "name": "Scrap",
                 "nodeType": "UserDefinedTypeName",
-                "referencedDeclaration": 6,
-                "src": "140:5:0",
+                "referencedDeclaration": 1136,
+                "src": "136:5:3",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_struct$_Scrap_$6_storage_ptr",
+                  "typeIdentifier": "t_struct$_Scrap_$1136_storage_ptr",
                   "typeString": "struct Scrappage.Scrap"
                 }
               }
@@ -1264,11 +1752,11 @@
           },
           {
             "constant": false,
-            "id": 13,
+            "id": 1143,
             "name": "scrapAccts",
             "nodeType": "VariableDeclaration",
-            "scope": 86,
-            "src": "159:24:0",
+            "scope": 1251,
+            "src": "155:24:3",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -1277,19 +1765,19 @@
             },
             "typeName": {
               "baseType": {
-                "id": 11,
+                "id": 1141,
                 "name": "uint",
                 "nodeType": "ElementaryTypeName",
-                "src": "159:4:0",
+                "src": "155:4:3",
                 "typeDescriptions": {
                   "typeIdentifier": "t_uint256",
                   "typeString": "uint256"
                 }
               },
-              "id": 12,
+              "id": 1142,
               "length": null,
               "nodeType": "ArrayTypeName",
-              "src": "159:6:0",
+              "src": "155:6:3",
               "typeDescriptions": {
                 "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
                 "typeString": "uint256[]"
@@ -1300,37 +1788,190 @@
           },
           {
             "body": {
-              "id": 46,
+              "id": 1154,
               "nodeType": "Block",
-              "src": "256:160:0",
+              "src": "221:39:3",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "32303037",
+                        "id": 1150,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "number",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "239:4:3",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_rational_2007_by_1",
+                          "typeString": "int_const 2007"
+                        },
+                        "value": "2007"
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "313334343535",
+                        "id": 1151,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "number",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "245:6:3",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_rational_134455_by_1",
+                          "typeString": "int_const 134455"
+                        },
+                        "value": "134455"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_rational_2007_by_1",
+                          "typeString": "int_const 2007"
+                        },
+                        {
+                          "typeIdentifier": "t_rational_134455_by_1",
+                          "typeString": "int_const 134455"
+                        }
+                      ],
+                      "id": 1149,
+                      "name": "setScraps",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1189,
+                      "src": "229:9:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_uint256_$_t_int256_$returns$__$",
+                        "typeString": "function (uint256,int256)"
+                      }
+                    },
+                    "id": 1152,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "229:23:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 1153,
+                  "nodeType": "ExpressionStatement",
+                  "src": "229:23:3"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1155,
+            "implemented": true,
+            "isConstructor": true,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1147,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1146,
+                  "name": "args",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1155,
+                  "src": "198:14:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_bytes32_$dyn_memory_ptr",
+                    "typeString": "bytes32[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 1144,
+                      "name": "bytes32",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "198:7:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes32",
+                        "typeString": "bytes32"
+                      }
+                    },
+                    "id": 1145,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "198:9:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_bytes32_$dyn_storage_ptr",
+                      "typeString": "bytes32[]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "197:16:3"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 1148,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "221:0:3"
+            },
+            "scope": 1251,
+            "src": "186:74:3",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 1188,
+              "nodeType": "Block",
+              "src": "328:160:3",
               "statements": [
                 {
                   "assignments": [
-                    21
+                    1163
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 21,
+                      "id": 1163,
                       "name": "scrap",
                       "nodeType": "VariableDeclaration",
-                      "scope": 47,
-                      "src": "266:19:0",
+                      "scope": 1189,
+                      "src": "338:19:3",
                       "stateVariable": false,
                       "storageLocation": "storage",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_Scrap_$6_storage_ptr",
+                        "typeIdentifier": "t_struct$_Scrap_$1136_storage_ptr",
                         "typeString": "struct Scrappage.Scrap"
                       },
                       "typeName": {
                         "contractScope": null,
-                        "id": 20,
+                        "id": 1162,
                         "name": "Scrap",
                         "nodeType": "UserDefinedTypeName",
-                        "referencedDeclaration": 6,
-                        "src": "266:5:0",
+                        "referencedDeclaration": 1136,
+                        "src": "338:5:3",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Scrap_$6_storage_ptr",
+                          "typeIdentifier": "t_struct$_Scrap_$1136_storage_ptr",
                           "typeString": "struct Scrappage.Scrap"
                         }
                       },
@@ -1338,31 +1979,31 @@
                       "visibility": "internal"
                     }
                   ],
-                  "id": 25,
+                  "id": 1167,
                   "initialValue": {
                     "argumentTypes": null,
                     "baseExpression": {
                       "argumentTypes": null,
-                      "id": 22,
+                      "id": 1164,
                       "name": "scraps",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 10,
-                      "src": "288:6:0",
+                      "referencedDeclaration": 1140,
+                      "src": "360:6:3",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Scrap_$6_storage_$",
+                        "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Scrap_$1136_storage_$",
                         "typeString": "mapping(uint256 => struct Scrappage.Scrap storage ref)"
                       }
                     },
-                    "id": 24,
+                    "id": 1166,
                     "indexExpression": {
                       "argumentTypes": null,
-                      "id": 23,
+                      "id": 1165,
                       "name": "_carid",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 15,
-                      "src": "295:6:0",
+                      "referencedDeclaration": 1157,
+                      "src": "367:6:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
@@ -1373,19 +2014,19 @@
                     "isPure": false,
                     "lValueRequested": false,
                     "nodeType": "IndexAccess",
-                    "src": "288:14:0",
+                    "src": "360:14:3",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_Scrap_$6_storage",
+                      "typeIdentifier": "t_struct$_Scrap_$1136_storage",
                       "typeString": "struct Scrappage.Scrap storage ref"
                     }
                   },
                   "nodeType": "VariableDeclarationStatement",
-                  "src": "266:36:0"
+                  "src": "338:36:3"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 30,
+                    "id": 1172,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1394,26 +2035,26 @@
                       "argumentTypes": null,
                       "expression": {
                         "argumentTypes": null,
-                        "id": 26,
+                        "id": 1168,
                         "name": "scrap",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 21,
-                        "src": "313:5:0",
+                        "referencedDeclaration": 1163,
+                        "src": "385:5:3",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Scrap_$6_storage_ptr",
+                          "typeIdentifier": "t_struct$_Scrap_$1136_storage_ptr",
                           "typeString": "struct Scrappage.Scrap storage pointer"
                         }
                       },
-                      "id": 28,
+                      "id": 1170,
                       "isConstant": false,
                       "isLValue": true,
                       "isPure": false,
                       "lValueRequested": true,
                       "memberName": "carid",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 3,
-                      "src": "313:11:0",
+                      "referencedDeclaration": 1133,
+                      "src": "385:11:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
@@ -1423,31 +2064,31 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 29,
+                      "id": 1171,
                       "name": "_carid",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 15,
-                      "src": "327:6:0",
+                      "referencedDeclaration": 1157,
+                      "src": "399:6:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
                       }
                     },
-                    "src": "313:20:0",
+                    "src": "385:20:3",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     }
                   },
-                  "id": 31,
+                  "id": 1173,
                   "nodeType": "ExpressionStatement",
-                  "src": "313:20:0"
+                  "src": "385:20:3"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 36,
+                    "id": 1178,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1456,55 +2097,55 @@
                       "argumentTypes": null,
                       "expression": {
                         "argumentTypes": null,
-                        "id": 32,
+                        "id": 1174,
                         "name": "scrap",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 21,
-                        "src": "343:5:0",
+                        "referencedDeclaration": 1163,
+                        "src": "415:5:3",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Scrap_$6_storage_ptr",
+                          "typeIdentifier": "t_struct$_Scrap_$1136_storage_ptr",
                           "typeString": "struct Scrappage.Scrap storage pointer"
                         }
                       },
-                      "id": 34,
+                      "id": 1176,
                       "isConstant": false,
                       "isLValue": true,
                       "isPure": false,
                       "lValueRequested": true,
                       "memberName": "scrapDate",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 5,
-                      "src": "343:15:0",
+                      "referencedDeclaration": 1135,
+                      "src": "415:15:3",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_bytes32",
-                        "typeString": "bytes32"
+                        "typeIdentifier": "t_int256",
+                        "typeString": "int256"
                       }
                     },
                     "nodeType": "Assignment",
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 35,
+                      "id": 1177,
                       "name": "_scrapDate",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 17,
-                      "src": "361:10:0",
+                      "referencedDeclaration": 1159,
+                      "src": "433:10:3",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_bytes32",
-                        "typeString": "bytes32"
+                        "typeIdentifier": "t_int256",
+                        "typeString": "int256"
                       }
                     },
-                    "src": "343:28:0",
+                    "src": "415:28:3",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_bytes32",
-                      "typeString": "bytes32"
+                      "typeIdentifier": "t_int256",
+                      "typeString": "int256"
                     }
                   },
-                  "id": 37,
+                  "id": 1179,
                   "nodeType": "ExpressionStatement",
-                  "src": "343:28:0"
+                  "src": "415:28:3"
                 },
                 {
                   "expression": {
@@ -1513,7 +2154,7 @@
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     },
-                    "id": 44,
+                    "id": 1186,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1523,12 +2164,12 @@
                       "arguments": [
                         {
                           "argumentTypes": null,
-                          "id": 41,
+                          "id": 1183,
                           "name": "_carid",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 15,
-                          "src": "399:6:0",
+                          "referencedDeclaration": 1157,
+                          "src": "471:6:3",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
                             "typeString": "uint256"
@@ -1544,18 +2185,18 @@
                         ],
                         "expression": {
                           "argumentTypes": null,
-                          "id": 38,
+                          "id": 1180,
                           "name": "scrapAccts",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 13,
-                          "src": "383:10:0",
+                          "referencedDeclaration": 1143,
+                          "src": "455:10:3",
                           "typeDescriptions": {
                             "typeIdentifier": "t_array$_t_uint256_$dyn_storage",
                             "typeString": "uint256[] storage ref"
                           }
                         },
-                        "id": 40,
+                        "id": 1182,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -1563,13 +2204,13 @@
                         "memberName": "push",
                         "nodeType": "MemberAccess",
                         "referencedDeclaration": null,
-                        "src": "383:15:0",
+                        "src": "455:15:3",
                         "typeDescriptions": {
                           "typeIdentifier": "t_function_arraypush_nonpayable$_t_uint256_$returns$_t_uint256_$",
                           "typeString": "function (uint256) returns (uint256)"
                         }
                       },
-                      "id": 42,
+                      "id": 1184,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -1577,7 +2218,7 @@
                       "lValueRequested": false,
                       "names": [],
                       "nodeType": "FunctionCall",
-                      "src": "383:23:0",
+                      "src": "455:23:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
@@ -1588,14 +2229,14 @@
                     "rightExpression": {
                       "argumentTypes": null,
                       "hexValue": "31",
-                      "id": 43,
+                      "id": 1185,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
                       "kind": "number",
                       "lValueRequested": false,
                       "nodeType": "Literal",
-                      "src": "408:1:0",
+                      "src": "480:1:3",
                       "subdenomination": null,
                       "typeDescriptions": {
                         "typeIdentifier": "t_rational_1_by_1",
@@ -1603,20 +2244,20 @@
                       },
                       "value": "1"
                     },
-                    "src": "383:26:0",
+                    "src": "455:26:3",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     }
                   },
-                  "id": 45,
+                  "id": 1187,
                   "nodeType": "ExpressionStatement",
-                  "src": "383:26:0"
+                  "src": "455:26:3"
                 }
               ]
             },
             "documentation": null,
-            "id": 47,
+            "id": 1189,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -1624,16 +2265,16 @@
             "name": "setScraps",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 18,
+              "id": 1160,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 15,
+                  "id": 1157,
                   "name": "_carid",
                   "nodeType": "VariableDeclaration",
-                  "scope": 47,
-                  "src": "209:11:0",
+                  "scope": 1189,
+                  "src": "285:11:3",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1641,10 +2282,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 14,
+                    "id": 1156,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
-                    "src": "209:4:0",
+                    "src": "285:4:3",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -1655,75 +2296,75 @@
                 },
                 {
                   "constant": false,
-                  "id": 17,
+                  "id": 1159,
                   "name": "_scrapDate",
                   "nodeType": "VariableDeclaration",
-                  "scope": 47,
-                  "src": "222:18:0",
+                  "scope": 1189,
+                  "src": "298:14:3",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_bytes32",
-                    "typeString": "bytes32"
+                    "typeIdentifier": "t_int256",
+                    "typeString": "int256"
                   },
                   "typeName": {
-                    "id": 16,
-                    "name": "bytes32",
+                    "id": 1158,
+                    "name": "int",
                     "nodeType": "ElementaryTypeName",
-                    "src": "222:7:0",
+                    "src": "298:3:3",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_bytes32",
-                      "typeString": "bytes32"
+                      "typeIdentifier": "t_int256",
+                      "typeString": "int256"
                     }
                   },
                   "value": null,
                   "visibility": "internal"
                 }
               ],
-              "src": "208:33:0"
+              "src": "284:29:3"
             },
             "payable": true,
             "returnParameters": {
-              "id": 19,
+              "id": 1161,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "256:0:0"
+              "src": "328:0:3"
             },
-            "scope": 86,
-            "src": "190:226:0",
+            "scope": 1251,
+            "src": "266:222:3",
             "stateMutability": "payable",
             "superFunction": null,
             "visibility": "public"
           },
           {
             "body": {
-              "id": 55,
+              "id": 1197,
               "nodeType": "Block",
-              "src": "471:34:0",
+              "src": "543:34:3",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 53,
+                    "id": 1195,
                     "name": "scrapAccts",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 13,
-                    "src": "488:10:0",
+                    "referencedDeclaration": 1143,
+                    "src": "560:10:3",
                     "typeDescriptions": {
                       "typeIdentifier": "t_array$_t_uint256_$dyn_storage",
                       "typeString": "uint256[] storage ref"
                     }
                   },
-                  "functionReturnParameters": 52,
-                  "id": 54,
+                  "functionReturnParameters": 1194,
+                  "id": 1196,
                   "nodeType": "Return",
-                  "src": "481:17:0"
+                  "src": "553:17:3"
                 }
               ]
             },
             "documentation": null,
-            "id": 56,
+            "id": 1198,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": true,
@@ -1731,23 +2372,23 @@
             "name": "getScraps",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 48,
+              "id": 1190,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "440:2:0"
+              "src": "512:2:3"
             },
             "payable": false,
             "returnParameters": {
-              "id": 52,
+              "id": 1194,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 51,
+                  "id": 1193,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 56,
-                  "src": "463:6:0",
+                  "scope": 1198,
+                  "src": "535:6:3",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1756,19 +2397,19 @@
                   },
                   "typeName": {
                     "baseType": {
-                      "id": 49,
+                      "id": 1191,
                       "name": "uint",
                       "nodeType": "ElementaryTypeName",
-                      "src": "463:4:0",
+                      "src": "535:4:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
                       }
                     },
-                    "id": 50,
+                    "id": 1192,
                     "length": null,
                     "nodeType": "ArrayTypeName",
-                    "src": "463:6:0",
+                    "src": "535:6:3",
                     "typeDescriptions": {
                       "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
                       "typeString": "uint256[]"
@@ -1778,19 +2419,19 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "462:8:0"
+              "src": "534:8:3"
             },
-            "scope": 86,
-            "src": "422:83:0",
+            "scope": 1251,
+            "src": "494:83:3",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "public"
           },
           {
             "body": {
-              "id": 75,
+              "id": 1217,
               "nodeType": "Block",
-              "src": "578:72:0",
+              "src": "646:72:3",
               "statements": [
                 {
                   "expression": {
@@ -1802,26 +2443,26 @@
                           "argumentTypes": null,
                           "baseExpression": {
                             "argumentTypes": null,
-                            "id": 65,
+                            "id": 1207,
                             "name": "scraps",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 10,
-                            "src": "596:6:0",
+                            "referencedDeclaration": 1140,
+                            "src": "664:6:3",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Scrap_$6_storage_$",
+                              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Scrap_$1136_storage_$",
                               "typeString": "mapping(uint256 => struct Scrappage.Scrap storage ref)"
                             }
                           },
-                          "id": 67,
+                          "id": 1209,
                           "indexExpression": {
                             "argumentTypes": null,
-                            "id": 66,
+                            "id": 1208,
                             "name": "_carid",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 58,
-                            "src": "603:6:0",
+                            "referencedDeclaration": 1200,
+                            "src": "671:6:3",
                             "typeDescriptions": {
                               "typeIdentifier": "t_uint256",
                               "typeString": "uint256"
@@ -1832,21 +2473,21 @@
                           "isPure": false,
                           "lValueRequested": false,
                           "nodeType": "IndexAccess",
-                          "src": "596:14:0",
+                          "src": "664:14:3",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_Scrap_$6_storage",
+                            "typeIdentifier": "t_struct$_Scrap_$1136_storage",
                             "typeString": "struct Scrappage.Scrap storage ref"
                           }
                         },
-                        "id": 68,
+                        "id": 1210,
                         "isConstant": false,
                         "isLValue": true,
                         "isPure": false,
                         "lValueRequested": false,
                         "memberName": "carid",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 3,
-                        "src": "596:20:0",
+                        "referencedDeclaration": 1133,
+                        "src": "664:20:3",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
@@ -1858,26 +2499,26 @@
                           "argumentTypes": null,
                           "baseExpression": {
                             "argumentTypes": null,
-                            "id": 69,
+                            "id": 1211,
                             "name": "scraps",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 10,
-                            "src": "618:6:0",
+                            "referencedDeclaration": 1140,
+                            "src": "686:6:3",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Scrap_$6_storage_$",
+                              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Scrap_$1136_storage_$",
                               "typeString": "mapping(uint256 => struct Scrappage.Scrap storage ref)"
                             }
                           },
-                          "id": 71,
+                          "id": 1213,
                           "indexExpression": {
                             "argumentTypes": null,
-                            "id": 70,
+                            "id": 1212,
                             "name": "_carid",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 58,
-                            "src": "625:6:0",
+                            "referencedDeclaration": 1200,
+                            "src": "693:6:3",
                             "typeDescriptions": {
                               "typeIdentifier": "t_uint256",
                               "typeString": "uint256"
@@ -1888,49 +2529,49 @@
                           "isPure": false,
                           "lValueRequested": false,
                           "nodeType": "IndexAccess",
-                          "src": "618:14:0",
+                          "src": "686:14:3",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_Scrap_$6_storage",
+                            "typeIdentifier": "t_struct$_Scrap_$1136_storage",
                             "typeString": "struct Scrappage.Scrap storage ref"
                           }
                         },
-                        "id": 72,
+                        "id": 1214,
                         "isConstant": false,
                         "isLValue": true,
                         "isPure": false,
                         "lValueRequested": false,
                         "memberName": "scrapDate",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 5,
-                        "src": "618:24:0",
+                        "referencedDeclaration": 1135,
+                        "src": "686:24:3",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_bytes32",
-                          "typeString": "bytes32"
+                          "typeIdentifier": "t_int256",
+                          "typeString": "int256"
                         }
                       }
                     ],
-                    "id": 73,
+                    "id": 1215,
                     "isConstant": false,
                     "isInlineArray": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "nodeType": "TupleExpression",
-                    "src": "595:48:0",
+                    "src": "663:48:3",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_tuple$_t_uint256_$_t_bytes32_$",
-                      "typeString": "tuple(uint256,bytes32)"
+                      "typeIdentifier": "t_tuple$_t_uint256_$_t_int256_$",
+                      "typeString": "tuple(uint256,int256)"
                     }
                   },
-                  "functionReturnParameters": 64,
-                  "id": 74,
+                  "functionReturnParameters": 1206,
+                  "id": 1216,
                   "nodeType": "Return",
-                  "src": "588:55:0"
+                  "src": "656:55:3"
                 }
               ]
             },
             "documentation": null,
-            "id": 76,
+            "id": 1218,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": true,
@@ -1938,16 +2579,16 @@
             "name": "getScrap",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 59,
+              "id": 1201,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 58,
+                  "id": 1200,
                   "name": "_carid",
                   "nodeType": "VariableDeclaration",
-                  "scope": 76,
-                  "src": "529:11:0",
+                  "scope": 1218,
+                  "src": "601:11:3",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1955,10 +2596,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 57,
+                    "id": 1199,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
-                    "src": "529:4:0",
+                    "src": "601:4:3",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -1968,20 +2609,20 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "528:13:0"
+              "src": "600:13:3"
             },
             "payable": false,
             "returnParameters": {
-              "id": 64,
+              "id": 1206,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 61,
+                  "id": 1203,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 76,
-                  "src": "563:4:0",
+                  "scope": 1218,
+                  "src": "635:4:3",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1989,10 +2630,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 60,
+                    "id": 1202,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
-                    "src": "563:4:0",
+                    "src": "635:4:3",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -2003,11 +2644,413 @@
                 },
                 {
                   "constant": false,
-                  "id": 63,
+                  "id": 1205,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 76,
-                  "src": "569:7:0",
+                  "scope": 1218,
+                  "src": "641:3:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_int256",
+                    "typeString": "int256"
+                  },
+                  "typeName": {
+                    "id": 1204,
+                    "name": "int",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "641:3:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_int256",
+                      "typeString": "int256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "634:11:3"
+            },
+            "scope": 1251,
+            "src": "583:135:3",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 1226,
+              "nodeType": "Block",
+              "src": "774:41:3",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "expression": {
+                      "argumentTypes": null,
+                      "id": 1223,
+                      "name": "scrapAccts",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1143,
+                      "src": "791:10:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_array$_t_uint256_$dyn_storage",
+                        "typeString": "uint256[] storage ref"
+                      }
+                    },
+                    "id": 1224,
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "memberName": "length",
+                    "nodeType": "MemberAccess",
+                    "referencedDeclaration": null,
+                    "src": "791:17:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 1222,
+                  "id": 1225,
+                  "nodeType": "Return",
+                  "src": "784:24:3"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1227,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "countScraps",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1219,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "744:2:3"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 1222,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1221,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1227,
+                  "src": "768:4:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1220,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "768:4:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "767:6:3"
+            },
+            "scope": 1251,
+            "src": "724:91:3",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 1249,
+              "nodeType": "Block",
+              "src": "893:207:3",
+              "statements": [
+                {
+                  "assignments": [
+                    1235
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 1235,
+                      "name": "tempEmptyStringTest",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 1250,
+                      "src": "901:32:3",
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes_memory_ptr",
+                        "typeString": "bytes"
+                      },
+                      "typeName": {
+                        "id": 1234,
+                        "name": "bytes",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "901:5:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes_storage_ptr",
+                          "typeString": "bytes"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 1239,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 1237,
+                        "name": "source",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1229,
+                        "src": "942:6:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      ],
+                      "id": 1236,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "nodeType": "ElementaryTypeNameExpression",
+                      "src": "936:5:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_type$_t_bytes_storage_ptr_$",
+                        "typeString": "type(bytes storage pointer)"
+                      },
+                      "typeName": "bytes"
+                    },
+                    "id": 1238,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "typeConversion",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "936:13:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_memory",
+                      "typeString": "bytes memory"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "901:48:3"
+                },
+                {
+                  "condition": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    },
+                    "id": 1243,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 1240,
+                        "name": "tempEmptyStringTest",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1235,
+                        "src": "961:19:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes_memory_ptr",
+                          "typeString": "bytes memory"
+                        }
+                      },
+                      "id": 1241,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "length",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "961:26:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "==",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "hexValue": "30",
+                      "id": 1242,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "991:1:3",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_0_by_1",
+                        "typeString": "int_const 0"
+                      },
+                      "value": "0"
+                    },
+                    "src": "961:31:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "falseBody": null,
+                  "id": 1247,
+                  "nodeType": "IfStatement",
+                  "src": "957:68:3",
+                  "trueBody": {
+                    "id": 1246,
+                    "nodeType": "Block",
+                    "src": "994:31:3",
+                    "statements": [
+                      {
+                        "expression": {
+                          "argumentTypes": null,
+                          "hexValue": "307830",
+                          "id": 1244,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "number",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "1013:3:3",
+                          "subdenomination": null,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_rational_0_by_1",
+                            "typeString": "int_const 0"
+                          },
+                          "value": "0x0"
+                        },
+                        "functionReturnParameters": 1233,
+                        "id": 1245,
+                        "nodeType": "Return",
+                        "src": "1006:10:3"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "externalReferences": [
+                    {
+                      "result": {
+                        "declaration": 1232,
+                        "isOffset": false,
+                        "isSlot": false,
+                        "src": "1054:6:3",
+                        "valueSize": 1
+                      }
+                    },
+                    {
+                      "source": {
+                        "declaration": 1229,
+                        "isOffset": false,
+                        "isSlot": false,
+                        "src": "1074:6:3",
+                        "valueSize": 1
+                      }
+                    }
+                  ],
+                  "id": 1248,
+                  "nodeType": "InlineAssembly",
+                  "operations": "{\n    result := mload(add(source, 32))\n}",
+                  "src": "1033:67:3"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1250,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "stringToBytes32",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1230,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1229,
+                  "name": "source",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1250,
+                  "src": "846:20:3",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 1228,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "846:6:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "845:22:3"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 1233,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1232,
+                  "name": "result",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1250,
+                  "src": "877:14:3",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -2015,10 +3058,10 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 62,
+                    "id": 1231,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
-                    "src": "569:7:0",
+                    "src": "877:7:3",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes32",
                       "typeString": "bytes32"
@@ -2028,117 +3071,20 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "562:15:0"
+              "src": "876:16:3"
             },
-            "scope": 86,
-            "src": "511:139:0",
-            "stateMutability": "view",
-            "superFunction": null,
-            "visibility": "public"
-          },
-          {
-            "body": {
-              "id": 84,
-              "nodeType": "Block",
-              "src": "706:41:0",
-              "statements": [
-                {
-                  "expression": {
-                    "argumentTypes": null,
-                    "expression": {
-                      "argumentTypes": null,
-                      "id": 81,
-                      "name": "scrapAccts",
-                      "nodeType": "Identifier",
-                      "overloadedDeclarations": [],
-                      "referencedDeclaration": 13,
-                      "src": "723:10:0",
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_array$_t_uint256_$dyn_storage",
-                        "typeString": "uint256[] storage ref"
-                      }
-                    },
-                    "id": 82,
-                    "isConstant": false,
-                    "isLValue": true,
-                    "isPure": false,
-                    "lValueRequested": false,
-                    "memberName": "length",
-                    "nodeType": "MemberAccess",
-                    "referencedDeclaration": null,
-                    "src": "723:17:0",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_uint256",
-                      "typeString": "uint256"
-                    }
-                  },
-                  "functionReturnParameters": 80,
-                  "id": 83,
-                  "nodeType": "Return",
-                  "src": "716:24:0"
-                }
-              ]
-            },
-            "documentation": null,
-            "id": 85,
-            "implemented": true,
-            "isConstructor": false,
-            "isDeclaredConst": true,
-            "modifiers": [],
-            "name": "countScraps",
-            "nodeType": "FunctionDefinition",
-            "parameters": {
-              "id": 77,
-              "nodeType": "ParameterList",
-              "parameters": [],
-              "src": "676:2:0"
-            },
-            "payable": false,
-            "returnParameters": {
-              "id": 80,
-              "nodeType": "ParameterList",
-              "parameters": [
-                {
-                  "constant": false,
-                  "id": 79,
-                  "name": "",
-                  "nodeType": "VariableDeclaration",
-                  "scope": 85,
-                  "src": "700:4:0",
-                  "stateVariable": false,
-                  "storageLocation": "default",
-                  "typeDescriptions": {
-                    "typeIdentifier": "t_uint256",
-                    "typeString": "uint256"
-                  },
-                  "typeName": {
-                    "id": 78,
-                    "name": "uint",
-                    "nodeType": "ElementaryTypeName",
-                    "src": "700:4:0",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_uint256",
-                      "typeString": "uint256"
-                    }
-                  },
-                  "value": null,
-                  "visibility": "internal"
-                }
-              ],
-              "src": "699:6:0"
-            },
-            "scope": 86,
-            "src": "656:91:0",
-            "stateMutability": "view",
+            "scope": 1251,
+            "src": "821:279:3",
+            "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 87,
-        "src": "25:726:0"
+        "scope": 1252,
+        "src": "25:1079:3"
       }
     ],
-    "src": "0:752:0"
+    "src": "0:1105:3"
   },
   "compiler": {
     "name": "solc",
@@ -2186,8 +3132,20 @@
       "links": {},
       "address": "0xda6c5e79c90970fd172e539235b7c896da3fe5c4",
       "transactionHash": "0x4c8674090ec3de3fdede431ab683ccbab895d4f1244c615f6740ebe377e26248"
+    },
+    "1533670732204": {
+      "events": {},
+      "links": {},
+      "address": "0xbc0a005b6c38320a37954ea20af81654ea2f9605",
+      "transactionHash": "0x4c8674090ec3de3fdede431ab683ccbab895d4f1244c615f6740ebe377e26248"
+    },
+    "1533750522708": {
+      "events": {},
+      "links": {},
+      "address": "0xdbc1d9591b18764409e0b4cc012e2b851a1f79c4",
+      "transactionHash": "0x6f3af20a575907e0c18194db1f4324aec65b97b0b7e0b201768898a4ebdb4108"
     }
   },
   "schemaVersion": "2.0.0",
-  "updatedAt": "2018-08-06T12:54:57.183Z"
+  "updatedAt": "2018-08-08T17:48:54.052Z"
 }

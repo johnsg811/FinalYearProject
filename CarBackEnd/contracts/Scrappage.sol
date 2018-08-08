@@ -3,12 +3,16 @@ contract Scrappage {
 
     struct Scrap {
         uint carid;
-        bytes32 scrapDate;
+        int scrapDate;
     }
     mapping (uint => Scrap) scraps;
     uint[] public scrapAccts;
 
-    function setScraps(uint _carid, bytes32 _scrapDate) public payable{
+    constructor(bytes32[] args) public {
+      setScraps(2007, 134455) ;
+    }
+
+    function setScraps(uint _carid, int _scrapDate) public payable{
         Scrap storage scrap = scraps[_carid];
 
         scrap.carid = _carid;
@@ -22,12 +26,23 @@ contract Scrappage {
         return scrapAccts;
     }
 
-    function getScrap(uint _carid) view public returns (uint, bytes32) {
+    function getScrap(uint _carid) view public returns (uint, int) {
         return (scraps[_carid].carid, scraps[_carid].scrapDate);
     }
 
     function countScraps() view public returns (uint) {
         return scrapAccts.length;
+    }
+
+    function stringToBytes32(string memory source) returns (bytes32 result) {
+      bytes memory tempEmptyStringTest = bytes(source);
+      if (tempEmptyStringTest.length == 0) {
+          return 0x0;
+      }
+
+      assembly {
+          result := mload(add(source, 32))
+      }
     }
 
 
