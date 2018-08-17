@@ -11,6 +11,7 @@ export class AddScrappageForm extends Component{
 
     	this.handleChange = this.handleChange.bind(this);
 	    this.handleSubmit = this.handleSubmit.bind(this);
+			this.handleClick = this.handleClick.bind(this);
   	}
 
 
@@ -27,13 +28,17 @@ export class AddScrappageForm extends Component{
 		}
   }
 
+	handleClick(event) {
+		window.location = window.location.origin;
+		event.preventDefault();
+	}
   	handleSubmit(event) {
 		// alert('A name was submitted: '+ this.state.country+ this.state.id);
-		var date = (this.state.scrapDate._d.getTime()/1000);
-		scrappageContract.setScraps(this.state.carid,this.state.scrapDate,{gas: 1000000});
+		var date = (new Date(this.state.scrapDate)).getTime()/1000;
+		scrappageContract.setScraps(this.state.carid,date,{gas: 1000000});
 		let value = scrappageContract.getScrap(this.state.carid,{gas: 1000000});
 		//web3.toAscii(value[1])
-		event.preventDefault();
+		// event.preventDefault();
 	}
     render(){
         // let movieList=this.props.movies.map((movie,i)=>
@@ -45,7 +50,7 @@ export class AddScrappageForm extends Component{
             <div>
 	            <div class="col-md-4">
 	        	</div>
-		        	<div class="col-md-4">
+		        	<div class="col-md-4 divbox">
 		            	<h3> Scappage Details</h3>
 		            	<hr />
 			            <form onSubmit={this.handleSubmit}>
@@ -55,11 +60,11 @@ export class AddScrappageForm extends Component{
 			            	</div>
 			            	<div class="form-group">
 			            		<label for="ScrappageDate">ScappageDate</label>
-											<DatePicker selected={this.state.scrapDate} onChange={this.handleChange} />
+											<input type="date" name = "scrapDate" value={this.state.scrapDate} onChange={this.handleChange} class="form-control" placeholder="Enter Date" />
 			            	</div>
 			            	<div class="form-group">
-			            		<label for="Submit">Website</label>
-							    <input type="text" type="Submit" class="form-control"  />
+							    		<input type="text" type="Submit" class="form-control form-control-button"  />
+											<input type="Button" value="Back" class="form-control form-control-homeButton" onClick={this.props.history.goBack}  />
 			            	</div>
 			            </form>
 			        </div>

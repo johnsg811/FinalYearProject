@@ -58,6 +58,17 @@ contract Dealers {
 
     }
 
+    function isADealer(uint _dealerID) view public returns(bool) {
+        uint i = 0;
+        while (i < dealerAccts.length) {
+            if(dealerAccts[i] == _dealerID) {
+                return true;
+            }
+            i++;
+        }
+        return false;
+    }
+
     function stringToBytes32(string memory source) returns (bytes32 result) {
       bytes memory tempEmptyStringTest = bytes(source);
       if (tempEmptyStringTest.length == 0) {

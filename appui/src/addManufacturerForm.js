@@ -20,7 +20,7 @@ export class AddManufacturerForm extends Component{
 		manufacturerContract.setBrand(this.state.id,this.state.name,this.state.country,this.state.phone,this.state.website,{gas: 1000000});
 		let value = manufacturerContract.getManufacturerById(this.state.id,{gas: 1000000});
 		//web3.toAscii(value[1])
-		event.preventDefault();
+		// event.preventDefault();
 	}
     render(){
         // let movieList=this.props.movies.map((movie,i)=>
@@ -32,7 +32,7 @@ export class AddManufacturerForm extends Component{
             <div>
 	            <div class="col-md-4">
 	        	</div>
-	        	<div class="col-md-4">
+	        	<div class="col-md-4 divbox">
 	            	<h3> Manufacture Details</h3>
 	            	<hr />
 		            <form onSubmit={this.handleSubmit}>
@@ -57,7 +57,6 @@ export class AddManufacturerForm extends Component{
 						    <input type="email" name = "website" value={this.state.website} onChange={this.handleChange} class="form-control" placeholder="Enter Website" />
 		            	</div>
 		            	<div class="form-group">
-		            		<label for="manufacturerId">Website</label>
 						    		<input type="text" type="Submit" class="form-control"  />
 		            	</div>
 		            </form>

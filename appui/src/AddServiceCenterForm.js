@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import { serviceCenterContract } from "./setup";
+import { serviceCenterContract } from "./setup";
 export class AddServiceCenter extends Component{
 
 	constructor(props) {
@@ -7,6 +7,7 @@ export class AddServiceCenter extends Component{
 	    this.state = {SCid: '',SCname: '', SCphone:'', SCstreet:'', SCtown:'', SCcounty:''};
 	    this.handleChange = this.handleChange.bind(this);
 	    this.handleSubmit = this.handleSubmit.bind(this);
+			this.handleClick = this.handleClick.bind(this);
   	}
 
 	handleChange(event) {
@@ -16,11 +17,23 @@ export class AddServiceCenter extends Component{
 
   	handleSubmit(event) {
 		// alert('A name was submitted: '+ this.state.country+ this.state.id);
+		var isAServiceCenter = serviceCenterContract.isAServiceCenter(parseInt(this.state.SCid));
+		if(!isAServiceCenter){
+			serviceCenterContract.setServiceCent(this.state.SCid,this.state.SCname,this.state.SCphone,this.state.SCstreet,this.state.SCtown,this.state.SCcounty,{gas: 1000000});
 
-		// dealerContract.setServiceCent(this.state.SCid,this.state.SCname,this.state.SCphone,this.state.SCstreet,this.state.SCtown,this.state.SCcounty,{gas: 1000000});
-		// let value = dealerContract.getServiceCent(this.state.did,{gas: 1000000});
-    
+			alert("Service Center Created");
+		} else {
+			event.preventDefault();
+			alert("Service Center ID already exists");
+		}
+
+
 		//web3.toAscii(value[1])
+		// event.preventDefault();
+	}
+
+	handleClick(event) {
+		window.location = window.location.origin;
 		event.preventDefault();
 	}
     render(){
@@ -33,7 +46,7 @@ export class AddServiceCenter extends Component{
             <div>
 	            <div class="col-md-4">
 	        	</div>
-	        	<div class="col-md-4">
+	        	<div class="col-md-4 divbox">
 	            	<h3> Service Center Details</h3>
 	            	<hr />
 		            <form onSubmit={this.handleSubmit}>
@@ -62,8 +75,8 @@ export class AddServiceCenter extends Component{
 						    <input type="text" name = "SCcounty" value={this.state.SCcounty} onChange={this.handleChange} class="form-control" placeholder="Enter County" />
 		            	</div>
 		            	<div class="form-group">
-		            		<label for="Submit">Submit</label>
-						    <input type="text" type="Submit" class="form-control"  />
+						    		<input type="text" type="Submit" class="form-control form-control-button"  />
+										<input type="Button" value="Back" class="form-control form-control-homeButton" onClick={this.props.history.goBack}  />
 		            	</div>
 		            </form>
 		        </div>

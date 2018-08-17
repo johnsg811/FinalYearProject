@@ -7,6 +7,7 @@ export class AddDealers extends Component{
 	    this.state = {did: '',dname: '', dphone:'', dstreet:'', dtown:'', dcounty:''};
 	    this.handleChange = this.handleChange.bind(this);
 	    this.handleSubmit = this.handleSubmit.bind(this);
+			this.handleClick = this.handleClick.bind(this);
   	}
 
 	handleChange(event) {
@@ -15,10 +16,24 @@ export class AddDealers extends Component{
   	}
 
   	handleSubmit(event) {
+
 		// alert('A name was submitted: '+ this.state.country+ this.state.id);
-		dealerContract.setDealer(this.state.did,this.state.dname,this.state.dphone,this.state.dstreet,this.state.dtown,this.state.dcounty,{gas: 1000000});
-		let value = dealerContract.getDealer(this.state.did,{gas: 1000000});
+		var isDealer = dealerContract.isADealer(parseInt(this.state.did));
+		if(!isDealer){
+			dealerContract.setDealer(this.state.did,this.state.dname,this.state.dphone,this.state.dstreet,this.state.dtown,this.state.dcounty,{gas: 1000000});
+			let value = dealerContract.getDealer(this.state.did,{gas: 1000000});
+			alert('Dealer Created')
+		} else{
+			event.preventDefault();
+			alert("Dealer ID already exists");
+		}
+
 		//web3.toAscii(value[1])
+		// event.preventDefault();
+	}
+
+	handleClick(event) {
+		window.location = window.location.origin;
 		event.preventDefault();
 	}
     render(){
@@ -31,7 +46,7 @@ export class AddDealers extends Component{
             <div>
 	            <div class="col-md-4">
 	        	</div>
-	        	<div class="col-md-4">
+	        	<div class="col-md-4 divbox">
 	            	<h3> Dealer Details</h3>
 	            	<hr />
 		            <form onSubmit={this.handleSubmit}>
@@ -60,8 +75,8 @@ export class AddDealers extends Component{
 						    <input type="text" name = "dcounty" value={this.state.dcounty} onChange={this.handleChange} class="form-control" placeholder="Enter County" />
 		            	</div>
 		            	<div class="form-group">
-		            		<label for="Submit">Submit</label>
-						    <input type="text" type="Submit" class="form-control"  />
+						    		<input type="text" type="Submit" class="form-control form-control-button"  />
+										<input type="Button" value="Back" class="form-control form-control-homeButton" onClick={this.props.history.goBack}  />
 		            	</div>
 		            </form>
 		        </div>

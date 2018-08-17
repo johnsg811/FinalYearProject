@@ -24,7 +24,6 @@ export class Home extends Component{
     render(){
         return(
             <div>
-              <h1 align="center">Welcome to AutoHistory</h1>
               <div>
                 <div class="col-md-2"></div>
   	            <div class="col-md-4">
@@ -48,7 +47,8 @@ export class Home extends Component{
 		  						    	<option value="addCustomer">Customer</option>
 		                    <option value="addVehicle">Vehicle</option>
 		  						    	<option value="addDealer">Dealer</option>
-		  						    	<option value="">Service Centers</option>
+		  						    	<option value="addServiceCenter">Service Centers</option>
+												<option value="addVehicleService">Vehicle Service</option>
 		                    <option value="addTransaction">Transaction</option>
 		                    <option value="addScrappage">Vehicle Scrappage</option>
 		  						    </select>

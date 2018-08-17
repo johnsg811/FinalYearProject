@@ -1,56 +1,86 @@
 pragma solidity ^0.4.18;
-contract ServiceCenters {
+contract VehicleService {
 
-    struct ServiceCent {
+    struct Service {
+        uint Sid;
+        int Sdate;
         uint SCid;
-        bytes32 SCname;
-        int SCphone;
-        bytes32 SCstreet;
-        bytes32 SCtown;
-        bytes32 SCcounty;
+        uint carid;
+        int Smileage;
+        bytes32 SrepairType;
+        bytes32 SrepairDetails;
+        int Scost;
     }
-    mapping (uint => ServiceCent) sc;
-    uint[] public serviceCentAccts;
+    mapping (uint => Service) services;
+    uint[] public serviceAccts;
+    uint public count = 8000;
 
-    function setServiceCent(uint _SCid, bytes32 _SCname, int _SCphone, bytes32 _SCstreet, bytes32 _SCtown, bytes32 _SCcounty) public payable{
-        ServiceCent storage serviceCent = sc[_SCid];
-
-        serviceCent.SCid = _SCid;
-        serviceCent.SCname = _SCname;
-        serviceCent.SCphone = _SCphone;
-        serviceCent.SCstreet = _SCstreet;
-        serviceCent.SCtown = _SCtown;
-        serviceCent.SCcounty = _SCcounty;
-
-        serviceCentAccts.push(_SCid) -1;
+    constructor(bytes32[] args) public {
+      setServicebyID(8001, 28345, 7001, 2006, 40500, stringToBytes32("Oil Change"),  stringToBytes32("Only Changed oil & checked Tyres"), 75);
+      setServicebyID(8002, 20389, 7001, 2006, 45000, stringToBytes32("Full Service"),  stringToBytes32("All Full Service Done"), 150);
+      setServicebyID(8003, 23098, 7001, 2006, 55000, stringToBytes32("AC Repair"),  stringToBytes32("AC Gas Refill"), 120);
+      setServicebyID(8005, 12934, 7001, 2006, 65000, stringToBytes32("Half Service"),  stringToBytes32("All Half Service Done"), 100);
+      setServicebyID(8006, 12944, 7002, 2006, 75000, stringToBytes32("Full Service"),  stringToBytes32("All Full Service Done"), 130);
+      setServicebyID(8007, 19442, 7003, 2001, 55000, stringToBytes32("Full Service"),  stringToBytes32("Full Service Done"), 130);
+      setServicebyID(8008, 19835, 7004, 2002, 65000, stringToBytes32("Half Service"),  stringToBytes32("Half Service Done"), 75);
     }
 
-    function getServiceCents() view public returns(uint[]) {
-        return serviceCentAccts;
+    function setServicebyID(uint _Sid, int _Sdate, uint _SCid, uint _carid, int _Smileage, bytes32 _SrepairType, bytes32 _SrepairDetails, int _Scost) public payable{
+        Service storage service = services[count];
+
+        service.Sid = count;
+        service.Sdate = _Sdate;
+        service.SCid = _SCid;
+        service.carid = _carid;
+        service.Smileage = _Smileage;
+        service.SrepairType = _SrepairType;
+        service.SrepairDetails = _SrepairDetails;
+        service.Scost = _Scost;
+
+        serviceAccts.push(count) -1;
+        count++;
     }
 
-    function getServiceCent(uint _SCid) view public returns (uint, bytes32, int, bytes32, bytes32, bytes32) {
-        return (sc[_SCid].SCid, sc[_SCid].SCname, sc[_SCid].SCphone, sc[_SCid].SCstreet, sc[_SCid].SCtown, sc[_SCid].SCcounty);
+    function getServices() view public returns(uint[]) {
+        return serviceAccts;
     }
 
-    function countServiceCents() view public returns (uint) {
-        return serviceCentAccts.length;
+    function getService(uint _Sid) view public returns (uint, int, int, bytes32, bytes32, int) {
+        return (services[_Sid].Sid, services[_Sid].Sdate, services[_Sid].Smileage, services[_Sid].SrepairType, services[_Sid].SrepairDetails, services[_Sid].Scost);
     }
 
-    function getServiceCentersByName(string _SCname) view public returns (uint, bytes32, int, bytes32, bytes32, bytes32) {
-        uint serviceCenterCount = serviceCentAccts.length;
-        uint serviceCenterid;
-        for (uint i=0; i<serviceCenterCount; i++) {
-            uint scid = serviceCentAccts[i];
-            ServiceCent storage serviceCent =  sc[scid];
-            if(keccak256(serviceCent.SCname) == keccak256(_SCname)){
-                serviceCenterid = scid;
-                break;
+    function getServiceRelations(uint _Sid) view public returns (uint, uint, uint) {
+        return (services[_Sid].Sid, services[_Sid].SCid, services[_Sid].carid);
+    }
+
+    function countServices() view public returns (uint) {
+        return serviceAccts.length;
+    }
+
+    function getServiceForCar(uint _carid) view public returns (uint[]) {
+        uint[] serviceIDs;
+
+        uint transCount = serviceAccts.length;
+        for (uint i=0; i<transCount; i++) {
+            uint servId = serviceAccts[i];
+            Service storage service = services[servId];
+            if(service.carid == _carid){
+                serviceIDs.push(service.Sid) -1;
             }
         }
-        return (sc[serviceCenterid].SCid, sc[serviceCenterid].SCname, sc[serviceCenterid].SCphone, sc[serviceCenterid].SCstreet, sc[serviceCenterid].SCtown, sc[serviceCenterid].SCcounty);
-
+        return (serviceIDs);
     }
 
+
+    function stringToBytes32(string memory source) returns (bytes32 result) {
+      bytes memory tempEmptyStringTest = bytes(source);
+      if (tempEmptyStringTest.length == 0) {
+          return 0x0;
+      }
+
+      assembly {
+          result := mload(add(source, 32))
+      }
+    }
 
 }

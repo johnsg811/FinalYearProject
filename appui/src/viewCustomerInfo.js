@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import web3 from 'web3';
-import { vehicleContract } from "./setup";
-import { manufacturerContract } from "./setup";
+import { customerContract } from "./setup";
+// import { vehicleContract } from "./setup";
 import {FormControl} from 'react-bootstrap'
-export class ViewVehicleInfo extends Component{
+export class ViewCustomerInfo extends Component{
 
 	constructor(props) {
 	    super(props);
-	    this.state = {vehicleId: ''};
+	    this.state = {cid: ''};
 
       this.handleChange = this.handleChange.bind(this);
 	    this.handleSubmit = this.handleSubmit.bind(this);
@@ -22,12 +22,11 @@ export class ViewVehicleInfo extends Component{
 
   	handleSubmit(event) {
 		// alert('A name was submitted: '+ this.state.country+ this.state.id);
-		var isVehicle = vehicleContract.isAVehicles(parseInt(this.state.vehicleId));
-		if(isVehicle){
-			this.props.history.push('/viewVehicleDetails/'+this.state.vehicleId)
+		var isCustomer = customerContract.isACustomer(parseInt(this.state.cid));
+		if(isCustomer){
+			this.props.history.push('/viewCustomerDetails/'+this.state.cid)
 		} else{
-			alert('Invalid Vehicle ID')
-
+			alert('Invalid Customer ID')
 		}
 
 		// window.location = targetName;
@@ -52,16 +51,16 @@ export class ViewVehicleInfo extends Component{
 	            <div class="col-md-4">
   	        	</div>
   	        	<div class="col-md-4 divbox">
-  	            	<h3> Vehicle Information</h3>
+  	            	<h3> Customer Information</h3>
   	            	<hr />
   		            <form onSubmit={this.handleSubmit}>
   		            	<div class="form-group">
-  		            		<label for="vehicleID">Vehicle ID</label>
-  						        <input type="number" name = "vehicleId" value={this.state.vehicleId} onChange={this.handleChange} class="form-control" placeholder="Enter Vehicle ID" required/>
+  		            		<label for="cid">Customer ID</label>
+  						        <input type="number" name = "cid" value={this.state.cid} onChange={this.handleChange} class="form-control" placeholder="Enter Customer ID" required/>
   		            	</div>
   		            	<div class="form-group">
   										<input type="text" type="Submit" class="form-control form-control-button"  />
-											<input type="Button" value="Back" class="form-control form-control-homeButton" onClick={this.props.history.goBack} />
+											<input type="Button" value="Back" class="form-control form-control-homeButton" onClick={this.props.history.goBack}  />
   									</div>
   		            </form>
   		        </div>
@@ -70,4 +69,4 @@ export class ViewVehicleInfo extends Component{
     }
 }
 
-export default ViewVehicleInfo;
+export default ViewCustomerInfo;

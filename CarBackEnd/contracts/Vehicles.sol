@@ -68,6 +68,17 @@ contract Vehicles {
 
     }
 
+    function isAVehicles(uint _vehiclesID) view public returns(bool) {
+        uint i = 0;
+        while (i < carAccts.length) {
+            if(carAccts[i] == _vehiclesID) {
+                return true;
+            }
+            i++;
+        }
+        return false;
+    }
+
     function stringToBytes32(string memory source) returns (bytes32 result) {
       bytes memory tempEmptyStringTest = bytes(source);
       if (tempEmptyStringTest.length == 0) {

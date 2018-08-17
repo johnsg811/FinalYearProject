@@ -17,6 +17,7 @@ export class AddTransactionForm extends Component{
 
 			this.handleChange = this.handleChange.bind(this);
 	    this.handleSubmit = this.handleSubmit.bind(this);
+			this.handleClick = this.handleClick.bind(this);
   	}
 
 		componentDidMount() {
@@ -35,13 +36,19 @@ export class AddTransactionForm extends Component{
 		}
   }
 
+	handleClick(event) {
+		window.location = window.location.origin;
+		event.preventDefault();
+	}
+
   	handleSubmit(event) {
 		// alert('A name was submitted: '+ this.state.country+ this.state.id);
-		var date = (this.state.tdate._d.getTime()/1000);
+		// var date = (this.state.tdate._d.getTime()/1000);
+		var date = (new Date(this.state.tdate)).getTime()/1000;
 		transactionContract.setTransaction(this.state.tid,date,this.state.did,this.state.carid,this.state.cid,this.state.buyOrSell,this.state.tamount,this.state.tmileage,{gas: 1000000});
 		let value = transactionContract.getTransactionDetail(this.state.tid,{gas: 1000000});
 		//web3.toAscii(value[1])
-		event.preventDefault();
+		alert("Transaction Completed");
 	}
     render(){
         // let movieList=this.props.movies.map((movie,i)=>
@@ -53,17 +60,14 @@ export class AddTransactionForm extends Component{
             <div>
 	            <div class="col-md-4">
 	        	</div>
-	        	<div class="col-md-4">
+	        	<div class="col-md-4 divbox">
 	            	<h3> Transaction Details</h3>
 	            	<hr />
 		            <form onSubmit={this.handleSubmit}>
-		             	<div class="form-group">
-		            		<label for="TransactionID">TransactionID</label>
-						    		<input type="number" name = "tid" value={this.state.tid} onChange={this.handleChange} class="form-control" placeholder="Enter Transaction ID" required/>
-									</div>
+
 		            	<div class="form-group">
 		            		<label for="TransactionDate">TransactionDate</label>
-						    		<DatePicker selected={this.state.tdate} onChange={this.handleChange} />
+										<input type="date" name = "tdate" value={this.state.tdate} onChange={this.handleChange} class="form-control" placeholder="Enter Date" />
 									</div>
 		            	<div class="form-group">
 		            		<label for="DealerID">DealerID</label>
@@ -79,7 +83,7 @@ export class AddTransactionForm extends Component{
 		            	</div>
 									<div class="form-group">
 										<label for="BuyOrSell">Buy Or Sell</label>
-											<select class="form-control" id="buyOrSell" name="buyOrSell" value={this.state.cid} onChange={this.handleChange}>
+											<select class="form-control" id="buyOrSell" name="buyOrSell" value={this.state.buyOrSell} onChange={this.handleChange}>
 												<option>Buy</option>
 												<option>Sell</option>
 											</select>
@@ -93,8 +97,8 @@ export class AddTransactionForm extends Component{
 						    		<input type="number" name = "tmileage" value={this.state.tmileage} onChange={this.handleChange} class="form-control" placeholder="Vehicle Mileage" />
 		            	</div>
 		            	<div class="form-group">
-		            		<label for="Submit">Transaction Submit</label>
-						    		<input type="text" type="Submit" class="form-control"  />
+						    		<input type="text" type="Submit" class="form-control form-control-button"  />
+										<input type="Button" value="Back" class="form-control form-control-homeButton" onClick={this.props.history.goBack}  />
 		            	</div>
 		            </form>
 		        </div>

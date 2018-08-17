@@ -2,6 +2,24 @@
   //text-align: center;
 }
 
+h1{
+  text-align: center;
+  color: #9b0909;
+  margin-top:3%;
+}
+
+.modal-backdrop{
+  z-index: -1;
+}
+
+.modal-content{
+  color: black;
+}
+
+.page-banner, .page-banner:hover, .page-banner:active, .page-banner:visited, .page-banner:focus {
+    text-decoration:none;
+}
+
 /*.App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 80px;
@@ -25,6 +43,31 @@
 /*@keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}*/
+
+.form-control-button {
+    min-width: 0;
+    width: 50%;
+    heigth: 5%;
+    float: right;
+
+}
+
+.form-control-homeButton {
+    min-width: 0;
+    width: 50%;
+    heigth: 5%;
+    float: left;
+
+}
+
+.form-group-align {
+  display: inline-block;
+  margin-left: 15px;
+}
+
+/*.form-group-margin-align{
+  margin-left: 15px
 }*/
 
 .mainbody {
@@ -54,10 +97,16 @@
   /*position: absolute;*/
   /*text-align: center;*/
   /*width: 100%;*/
-  top: 10%;
-  margin-top:10%;
+  top: 15%;
+  margin-top:5%;
   color:white;
   border: 1px solid transparent;
   border-radius:3%;
-  background-color: rgba(219, 219, 214,0.4);
+  background-color: rgba(219, 219, 214,0.7);
+  color: black;
+}
+
+.myTabs ul > li > a {
+    background-color: grey;
+    color: white;
 }

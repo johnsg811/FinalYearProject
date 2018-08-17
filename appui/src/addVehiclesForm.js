@@ -25,6 +25,8 @@ export class AddVehicles extends Component{
     	this.handleChange = this.handleChange.bind(this);
 	    this.handleSubmit = this.handleSubmit.bind(this);
 			this.handleChangeSelect = this.handleChangeSelect.bind(this);
+			this.handleClick = this.handleClick.bind(this);
+
   	}
 
 		handleChange(event) {
@@ -34,25 +36,34 @@ export class AddVehicles extends Component{
 
   	handleSubmit(event) {
 		// alert('A name was submitted: '+ this.state.country+ this.state.id);
-		vehicleContract.setCar(this.state.id,this.state.model,this.state.year,this.state.value,true,this.state.manufacturerID,{gas: 1000000});
+		var isVehicle = vehicleContract.isAVehicles(parseInt(this.state.id));
+		if(!isVehicle){
+			vehicleContract.setCar(this.state.id,this.state.model,this.state.year,this.state.value,true,this.state.manufacturerID,{gas: 1000000});
+			alert("Vehicle Created");
+		} else {
+			event.preventDefault();
+			alert("Vehicle ID already exists");
+		}
 		//let value = manufacturerContract.getBrand(this.state.id,{gas: 1000000});
 		//web3.toAscii(value[1])
-		event.preventDefault();
+		// event.preventDefault();
 	}
 	handleChangeSelect(event) {
 	  const manufacturerId = event.target.value;
 		this.state.manufacturerID = manufacturerId;
 	  const manufacturer = this.allManufact.find(u => u.id === manufacturerId);
-	  // this.setState({
-	  //   value: manufacturer
-	  // });
+	}
+
+	handleClick(event) {
+		window.location = window.location.origin;
+		event.preventDefault();
 	}
     render(){
         return(
             <div>
 	            <div class="col-md-4">
 	        	</div>
-	        	<div class="col-md-4">
+	        	<div class="col-md-4 divbox">
 	            	<h3> Vehicle Details</h3>
 	            	<hr />
 		            <form onSubmit={this.handleSubmit}>
@@ -74,7 +85,7 @@ export class AddVehicles extends Component{
 		            	</div>
 		            	<div class="form-group">
 									<label for="value">Car Manufacturer</label>
-		            		<FormControl id = "manufacturer" componentClass="select" onChange={this.handleChangeSelect}>
+		            		<FormControl id = "manufacturer" name="manufacturerID" componentClass="select" onChange={this.handleChangeSelect}>
 			   							{this.allManufact.map((r , i) =>
 									     <option
 									       key={i}
@@ -82,10 +93,12 @@ export class AddVehicles extends Component{
 									       {r.name}
 									     </option>
 									  	)}
-									</FormControl>
+											</FormControl>
 		            	</div>
+
 		            	<div class="form-group">
-										<input type="text" type="Submit" class="form-control"  />
+										<input type="text" type="Submit" class="form-control form-control-button"  />
+										<input type="Button" value="Back" class="form-control form-control-homeButton" onClick={this.props.history.goBack}  />
 									</div>
 		            </form>
 		        </div>

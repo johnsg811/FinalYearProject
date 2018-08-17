@@ -27,11 +27,21 @@ export class AddCustomersForm extends Component{
 
   	handleSubmit(event) {
 			// alert('A name was submitted: '+ this.state.country+ this.state.id);
-			var date = (this.state.cdob._d.getTime()/1000);
-			customerContract.setClient(this.state.cid,this.state.cname,date,this.state.clicencenum,this.state.dstreet,this.state.dtown,this.state.dcounty,{gas: 1000000});
-			let value = customerContract.getClient(this.state.did,{gas: 1000000});
+			var isCustomer = customerContract.isACustomer(parseInt(this.state.cid));
+			if(!isCustomer){
+				var date = (new Date(this.state.cdob)).getTime()/1000;
+				customerContract.setClient(this.state.cid,this.state.cname,date,this.state.clicencenum,
+					this.state.dstreet,this.state.dtown,this.state.dcounty,{gas: 1000000});
+				let value = customerContract.getClient(parseInt(this.state.did));
+				alert('Customer created!')
+			}
+			else {
+				event.preventDefault();
+				alert("Customer ID already exists");
+			}
+
 			//web3.toAscii(value[1])
-			event.preventDefault();
+			// event.preventDefault();
 		}
 
 		handleClick(event) {
@@ -54,35 +64,35 @@ export class AddCustomersForm extends Component{
 		            <form onSubmit={this.handleSubmit}>
 		            	<div class="form-group">
 		            		<label for="CustomerID">ID</label>
-						    <input type="number" name = "cid" value={this.state.cid} onChange={this.handleChange} class="form-control" placeholder="Enter ID" required/>
+						    		<input type="number" name = "cid" value={this.state.cid} onChange={this.handleChange} class="form-control" placeholder="Enter ID" required/>
 		            	</div>
 		            	<div class="form-group">
 		            		<label for="CustomerName">Name</label>
-						    <input type="text" name = "cname" value={this.state.cname} onChange={this.handleChange} class="form-control" placeholder="Enter Name" />
+						    		<input type="text" name = "cname" value={this.state.cname} onChange={this.handleChange} class="form-control" placeholder="Enter Name" />
 		            	</div>
 		            	<div class="form-group">
 		            		<label for="DateOfBirth">DateOfBirth</label>
-										<DatePicker selected={this.state.cdob} onChange={this.handleChange} />
+										<input type="date" name = "cdob" value={this.state.cdob} onChange={this.handleChange} class="form-control" placeholder="Enter Name" />
 		            	</div>
 									<div class="form-group">
 		            		<label for="LicenceNumber">LicenceNumber</label>
-						    <input type="number" name = "clicencenum" value={this.state.clicencenum} onChange={this.handleChange} class="form-control" placeholder="Enter Licence Number" />
+						    		<input type="number" name = "clicencenum" value={this.state.clicencenum} onChange={this.handleChange} class="form-control" placeholder="Enter Licence Number" />
 		            	</div>
 		            	<div class="form-group">
 		            		<label for="Street">Street</label>
-						    <input type="text" name = "dstreet" value={this.state.dstreet} onChange={this.handleChange} class="form-control" placeholder="Enter Street" />
+						    		<input type="text" name = "dstreet" value={this.state.dstreet} onChange={this.handleChange} class="form-control" placeholder="Enter Street" />
 		            	</div>
 		            	<div class="form-group">
 		            		<label for="Town">Town</label>
-						    <input type="text" name = "dtown" value={this.state.dtown} onChange={this.handleChange} class="form-control" placeholder="Enter Town" />
+						    		<input type="text" name = "dtown" value={this.state.dtown} onChange={this.handleChange} class="form-control" placeholder="Enter Town" />
 		            	</div>
 		            	<div class="form-group">
 		            		<label for="County">County</label>
-						    <input type="text" name = "dcounty" value={this.state.dcounty} onChange={this.handleChange} class="form-control" placeholder="Enter County" />
+						    		<input type="text" name = "dcounty" value={this.state.dcounty} onChange={this.handleChange} class="form-control" placeholder="Enter County" />
 		            	</div>
 		            	<div class="form-group">
-						    		<input type="Submit" class="form-control"  />
-										<input type="Button" value="Home" class="form-control" onClick={this.handleClick} />
+						    		<input type="Submit" class="form-control form-control-button" />
+										<input type="Button" value="Back" class="form-control form-control-homeButton" onClick={this.props.history.goBack} />
 		            	</div>
 		            </form>
 		        </div>

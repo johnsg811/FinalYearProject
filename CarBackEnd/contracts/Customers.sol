@@ -64,6 +64,17 @@ contract Customers {
 
     }
 
+    function isACustomer(uint _customerID) view public returns(bool) {
+        uint i = 0;
+        while (i < clientAccts.length) {
+            if(clientAccts[i] == _customerID) {
+                return true;
+            }
+            i++;
+        }
+        return false;
+    }
+
     function stringToBytes32(string memory source) returns (bytes32 result) {
       bytes memory tempEmptyStringTest = bytes(source);
       if (tempEmptyStringTest.length == 0) {
@@ -74,6 +85,8 @@ contract Customers {
           result := mload(add(source, 32))
       }
     }
+
+
 
 
 }
