@@ -18,13 +18,13 @@ contract Transactions {
 
 
     constructor(bytes32[] args) public {
-      setTransaction(5001, 28345, 3001, 2001, 4002, stringToBytes32("sell"), 31000, 12000);
-      setTransaction(5002, 28345, 3001, 2002, 4002, stringToBytes32("sell"), 30000, 24000);
-      setTransaction(5003, 28345, 3001, 2002, 4002, stringToBytes32("buy"), 35000, 0);
-      setTransaction(5004, 22019, 3001, 2006, 4004, stringToBytes32("buy"), 39000, 33000);
-      setTransaction(5005, 58473, 3001, 2007, 4002, stringToBytes32("sell"), 65000, 45000);
-      setTransaction(5006, 19845, 3001, 2008, 4006, stringToBytes32("buy"), 75000, 22000);
-      setTransaction(5007, 22019, 3001, 2006, 4007, stringToBytes32("sell"), 37000, 33000);
+      setTransaction(5001, 1527343351, 3001, 2001, 4002, stringToBytes32("sell"), 31000, 12000);
+      setTransaction(5002, 1495807351, 3001, 2002, 4002, stringToBytes32("sell"), 30000, 24000);
+      setTransaction(5003, 1527343351, 3001, 2002, 4002, stringToBytes32("buy"), 35000, 0);
+      setTransaction(5004, 1464271351, 3001, 2006, 4004, stringToBytes32("buy"), 39000, 33000);
+      setTransaction(5005, 1495807351, 3001, 2007, 4002, stringToBytes32("sell"), 65000, 45000);
+      setTransaction(5006, 1464271351, 3001, 2008, 4006, stringToBytes32("buy"), 75000, 22000);
+      setTransaction(5007, 1516975351, 3001, 2006, 4007, stringToBytes32("sell"), 37000, 33000);
     }
 
     function setTransaction(uint _tid, uint _tdate, uint _did, uint _carid, uint _cid, bytes32 _buyOrSell, int _tamount, int _tmileage) public payable{

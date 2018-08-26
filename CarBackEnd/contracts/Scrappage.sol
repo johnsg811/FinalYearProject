@@ -9,7 +9,7 @@ contract Scrappage {
     uint[] public scrapAccts;
 
     constructor(bytes32[] args) public {
-      setScraps(2007, 134455) ;
+      setScraps(2007, 1527343351) ;
     }
 
     function setScraps(uint _carid, int _scrapDate) public payable{

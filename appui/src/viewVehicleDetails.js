@@ -36,7 +36,7 @@ export class ViewVehicleDetails extends Component{
 					var currentTransaction = transactionContract.getTransactionDetail(parseInt(id));
 					self.allTransactions[count].tid = parseInt(id);
 					let date = (new Date(parseInt(currentTransaction[1])*1000));
-					self.allTransactions[count].tdate = date.getDate().toString() + "-" + date.getMonth().toString() + "-" + date.getFullYear().toString();
+					self.allTransactions[count].tdate = date.getDate().toString() + "-" + (date.getMonth()+1).toString() + "-" + date.getFullYear().toString();
 					var currTransRel = transactionContract.getTransactionRelations(parseInt(id));
 					//Dealer
 					var currDealer = dealerContract.getDealer(parseInt(currTransRel[1]));
@@ -64,7 +64,7 @@ export class ViewVehicleDetails extends Component{
 					var currentService = vehileServiceContract.getService(parseInt(id));
 					self.allServices[count].Sid = parseInt(id);
 					let date = (new Date(parseInt(currentService[1])*1000));
-					self.allServices[count].sdate = date.getDate().toString() + "-" + date.getMonth().toString() + "-" + date.getFullYear().toString();
+					self.allServices[count].sdate = date.getDate().toString() + "-" + (date.getMonth()+1).toString() + "-" + date.getFullYear().toString();
 					var currServRel = vehileServiceContract.getServiceRelations(parseInt(id));
 
 

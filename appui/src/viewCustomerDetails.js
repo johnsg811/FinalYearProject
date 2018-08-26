@@ -26,7 +26,7 @@ export class ViewCustomerDetails extends Component{
       }).join('');
 
 			let date = (new Date(parseInt(this.customer[2])*1000));
-			this.customerInfo.cdob = date.getDate().toString() + "-" + date.getMonth().toString() + "-" + date.getFullYear().toString();
+			this.customerInfo.cdob = date.getDate().toString() + "-" + (date.getMonth()+1).toString() + "-" + date.getFullYear().toString();
       this.customerInfo.clicencenum = parseInt(this.customer[3])
       this.customerInfo.ccounty = this.customer[6].match(/.{1,2}/g).map(function(v){
         return String.fromCharCode(parseInt(v, 16));
